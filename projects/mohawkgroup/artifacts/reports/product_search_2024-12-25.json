@@ -1,0 +1,79 @@
+{
+  "name": "Product Search Test",
+  "description": "Verify product search functionality works correctly",
+  "timestamp": "2024-12-25T14:45:00.000Z",
+  "duration": 12456,
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "duration": 12456,
+    "description": "Product search test passed"
+  },
+  "flows": [
+    {
+      "name": "Product Search",
+      "description": "Search for products and verify results",
+      "status": "passed",
+      "duration": 12456,
+      "steps": [
+        {
+          "action": "goto",
+          "description": "Navigate to homepage",
+          "selector": null,
+          "status": "passed",
+          "duration": 1890
+        },
+        {
+          "action": "click",
+          "description": "Open search modal",
+          "selector": ".search-icon",
+          "status": "passed",
+          "duration": 567
+        },
+        {
+          "action": "fill",
+          "description": "Enter search term",
+          "selector": "#search-input",
+          "status": "passed",
+          "duration": 345
+        },
+        {
+          "action": "click",
+          "description": "Submit search",
+          "selector": "button.search-submit",
+          "status": "passed",
+          "duration": 2134
+        },
+        {
+          "action": "waitForLoadState",
+          "description": "Wait for results",
+          "selector": null,
+          "status": "passed",
+          "duration": 3456
+        },
+        {
+          "action": "expectVisible",
+          "description": "Check results container",
+          "selector": ".search-results",
+          "status": "passed",
+          "duration": 234
+        },
+        {
+          "action": "expectText",
+          "description": "Verify results count",
+          "selector": ".results-count",
+          "status": "passed",
+          "duration": 156
+        },
+        {
+          "action": "screenshot",
+          "description": "Capture search results",
+          "selector": null,
+          "status": "passed",
+          "duration": 3674
+        }
+      ]
+    }
+  ]
+}

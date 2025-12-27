@@ -1,0 +1,58 @@
+{
+  "name": "Homepage Smoke Test",
+  "description": "Verify homepage loads correctly and main elements are visible",
+  "timestamp": "2024-12-26T10:30:00.000Z",
+  "duration": 4523,
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "duration": 4523,
+    "description": "Homepage smoke test passed"
+  },
+  "flows": [
+    {
+      "name": "Homepage Smoke Test",
+      "description": "Verify homepage loads correctly",
+      "status": "passed",
+      "duration": 4523,
+      "steps": [
+        {
+          "action": "goto",
+          "description": "Navigate to homepage",
+          "selector": null,
+          "status": "passed",
+          "duration": 1234
+        },
+        {
+          "action": "waitForLoadState",
+          "description": "Wait for page load",
+          "selector": null,
+          "status": "passed",
+          "duration": 856
+        },
+        {
+          "action": "expectVisible",
+          "description": "Check header is visible",
+          "selector": "header.site-header",
+          "status": "passed",
+          "duration": 123
+        },
+        {
+          "action": "expectVisible",
+          "description": "Check navigation is visible",
+          "selector": "nav.main-navigation",
+          "status": "passed",
+          "duration": 98
+        },
+        {
+          "action": "screenshot",
+          "description": "Capture homepage",
+          "selector": null,
+          "status": "passed",
+          "duration": 2212
+        }
+      ]
+    }
+  ]
+}

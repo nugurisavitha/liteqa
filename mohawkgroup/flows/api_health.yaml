@@ -1,0 +1,117 @@
+# Mohawk Group - API Health Check
+# ================================
+
+name: Website API Health Check
+description: Verify key pages return correct HTTP status codes
+runner: api
+
+steps:
+  # Check homepage
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com
+    description: Check homepage availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify homepage returns 200 OK
+
+  # Check Hospitality page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/hospitality
+    description: Check Hospitality page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Hospitality page returns 200 OK
+
+  # Check Education page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/education
+    description: Check Education page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Education page returns 200 OK
+
+  # Check Workplace page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/workplace
+    description: Check Workplace page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Workplace page returns 200 OK
+
+  # Check Healthcare page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/healthcare
+    description: Check Healthcare page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Healthcare page returns 200 OK
+
+  # Check Government page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/government
+    description: Check Government page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Government page returns 200 OK
+
+  # Check Product Index page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/product-index
+    description: Check Product Index page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Product Index page returns 200 OK
+
+  # Check Senior Living page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/senior-living
+    description: Check Senior Living page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Senior Living page returns 200 OK
+
+  # Check Retail page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/retail
+    description: Check Retail page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Retail page returns 200 OK
+
+  # Check Aviation page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/aviation
+    description: Check Aviation page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Aviation page returns 200 OK
+
+  # Check Multi-Family page
+  - action: request
+    method: GET
+    url: https://www.mohawkgroup.com/multifamily
+    description: Check Multi-Family page availability
+
+  - action: expectStatus
+    status: 200
+    description: Verify Multi-Family page returns 200 OK

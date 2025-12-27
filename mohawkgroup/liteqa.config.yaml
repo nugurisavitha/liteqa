@@ -1,0 +1,33 @@
+# LiteQA Configuration
+# ==================
+
+# Artifacts configuration
+artifactsDir: ./artifacts
+screenshotsDir: ./artifacts/screenshots
+reportsDir: ./artifacts/reports
+
+# Browser settings
+browser: chromium  # chromium, firefox, webkit
+headless: true
+slowMo: 0
+viewport:
+  width: 1280
+  height: 720
+
+# Timeouts
+defaultTimeout: 30000
+
+# Self-healing
+selfHeal: true
+selfHealThreshold: 0.6
+
+# Retries
+retries: 0
+
+# Mobile settings (optional)
+# mobile:
+#   appiumUrl: http://127.0.0.1:4723
+#   capabilities:
+#     platformName: Android
+#     appium:automationName: UiAutomator2
+#     appium:deviceName: Android Emulator

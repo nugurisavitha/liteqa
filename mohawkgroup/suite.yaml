@@ -1,0 +1,21 @@
+# Mohawk Group Test Suite
+# ========================
+
+name: Mohawk Group Test Suite
+description: Comprehensive test suite for mohawkgroup.com
+
+# List of flow files to run
+flows:
+  - flows/homepage_smoke.yaml
+  - flows/api_health.yaml
+  - flows/dashboard_tiles.yaml
+  - flows/industry_navigation.yaml
+  - flows/hero_carousel.yaml
+  - flows/products_browse.yaml
+  - flows/responsive_design.yaml
+  - flows/external_links.yaml
+
+# Environment variables
+env:
+  BASE_URL: https://www.mohawkgroup.com
+  TIMEOUT: 30000

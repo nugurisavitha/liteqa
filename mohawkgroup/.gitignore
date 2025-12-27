@@ -1,0 +1,9 @@
+# LiteQA
+node_modules/
+dist/
+artifacts/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

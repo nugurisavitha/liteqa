@@ -1,0 +1,5810 @@
+name: Blueprint - www.mohawkgroup.com
+baseUrl: https://www.mohawkgroup.com
+pages:
+  - url: https://www.mohawkgroup.com
+    title: Mohawk Group | Commercial Carpet & Hard Surface Solutions
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: '[aria-label="Previous slide"]'
+        type: button
+        text: ''
+        ariaLabel: Previous slide
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 10
+          'y': 324
+          width: 27
+          height: 44
+      - selector: '[aria-label="Next slide"]'
+        type: button
+        text: ''
+        ariaLabel: Next slide
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1243
+          'y': 324
+          width: 27
+          height: 44
+      - selector: '[aria-label="Go to slide 1"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 563.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 2"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 586.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 3"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 3
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 609.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 4"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 4
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 632.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 5"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 655.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 6"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 6
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 678.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 7"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 7
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 701.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: a
+        type: link
+        text: |-
+          Living Local Woods 2.5 | 4.5
+
+          Featuring a new selection of some of our most popular wood visuals, Wo
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 0
+          'y': 96
+          width: 1280
+          height: 500
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: EXPLORE THE COLLECTION
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 40.5
+          'y': 445.25
+          width: 261.125
+          height: 47
+      - selector: a
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 9240
+          'y': 96
+          width: 1280
+          height: 500
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: ''
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 9280.5
+          'y': 445.25
+          width: 261.125
+          height: 47
+      - selector: a.pixel
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/product-index
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 0
+          'y': 596
+          width: 1
+          height: 1
+      - selector: a
+        type: link
+        text: Explore the Collection
+        href: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 318
+          'y': 1226
+          width: 143
+          height: 52
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 466
+          'y': 1234.5
+          width: 30
+          height: 30
+      - selector: a
+        type: link
+        text: View the Collection
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/hot-and-heavy-ii
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 936
+          'y': 1826
+          width: 143
+          height: 52
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1084
+          'y': 1834.5
+          width: 30
+          height: 30
+      - selector: a
+        type: link
+        text: View the Collection
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/healthy-environments-homogeneous-resilient-sheet
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 318
+          'y': 2590
+          width: 143
+          height: 52
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 466
+          'y': 2598.5
+          width: 30
+          height: 30
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        text: |-
+          Living Local Woods 2.5 | 4.5
+
+          Featuring a new selection of some of our most popular wood visuals, Wo
+        selector: a[href="/products/hard-surface/collections/living-local"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href=""]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        text: ''
+        selector: a[href="/products/hard-surface/collections/living-local"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href=""]
+        internal: true
+      - href: https://www.mohawkgroup.com/product-index
+        text: ''
+        selector: a[href="/product-index"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        text: Explore the Collection
+        selector: a[href="/products/soft-surface/collections/custom-collections/natureverse"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/hot-and-heavy-ii
+        text: View the Collection
+        selector: a[href="/products/hard-surface/collections/hot-and-heavy-ii"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/healthy-environments-homogeneous-resilient-sheet
+        text: View the Collection
+        selector: a[href="/products/hard-surface/collections/healthy-environments-homogeneous-resilient-sheet"]
+        internal: true
+    timestamp: '2025-12-26T22:09:11.963Z'
+    depth: 0
+  - url: https://www.mohawkgroup.com/
+    title: Mohawk Group | Commercial Carpet & Hard Surface Solutions
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: '[aria-label="Previous slide"]'
+        type: button
+        text: ''
+        ariaLabel: Previous slide
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 10
+          'y': 324
+          width: 27
+          height: 44
+      - selector: '[aria-label="Next slide"]'
+        type: button
+        text: ''
+        ariaLabel: Next slide
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1243
+          'y': 324
+          width: 27
+          height: 44
+      - selector: '[aria-label="Go to slide 1"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 563.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 2"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 586.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 3"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 3
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 609.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 4"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 4
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 632.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 5"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 655.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 6"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 6
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 678.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: '[aria-label="Go to slide 7"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 7
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 701.5
+          'y': 564
+          width: 15
+          height: 15
+      - selector: a
+        type: link
+        text: |-
+          Living Local Woods 2.5 | 4.5
+
+          Featuring a new selection of some of our most popular wood visuals, Wo
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 0
+          'y': 96
+          width: 1280
+          height: 500
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: EXPLORE THE COLLECTION
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 40.5
+          'y': 445.25
+          width: 261.125
+          height: 47
+      - selector: a
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 9240
+          'y': 96
+          width: 1280
+          height: 500
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: ''
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 9280.5
+          'y': 445.25
+          width: 261.125
+          height: 47
+      - selector: a.pixel
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/product-index
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 0
+          'y': 596
+          width: 1
+          height: 1
+      - selector: a
+        type: link
+        text: Explore the Collection
+        href: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 318
+          'y': 1226
+          width: 143
+          height: 52
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 466
+          'y': 1234.5
+          width: 30
+          height: 30
+      - selector: a
+        type: link
+        text: View the Collection
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/hot-and-heavy-ii
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 936
+          'y': 1826
+          width: 143
+          height: 52
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1084
+          'y': 1834.5
+          width: 30
+          height: 30
+      - selector: a
+        type: link
+        text: View the Collection
+        href: https://www.mohawkgroup.com/products/hard-surface/collections/healthy-environments-homogeneous-resilient-sheet
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 318
+          'y': 2590
+          width: 143
+          height: 52
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 466
+          'y': 2598.5
+          width: 30
+          height: 30
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        text: |-
+          Living Local Woods 2.5 | 4.5
+
+          Featuring a new selection of some of our most popular wood visuals, Wo
+        selector: a[href="/products/hard-surface/collections/living-local"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href=""]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        text: ''
+        selector: a[href="/products/hard-surface/collections/living-local"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href=""]
+        internal: true
+      - href: https://www.mohawkgroup.com/product-index
+        text: ''
+        selector: a[href="/product-index"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        text: Explore the Collection
+        selector: a[href="/products/soft-surface/collections/custom-collections/natureverse"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/hot-and-heavy-ii
+        text: View the Collection
+        selector: a[href="/products/hard-surface/collections/hot-and-heavy-ii"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/collections/healthy-environments-homogeneous-resilient-sheet
+        text: View the Collection
+        selector: a[href="/products/hard-surface/collections/healthy-environments-homogeneous-resilient-sheet"]
+        internal: true
+    timestamp: '2025-12-26T22:09:13.676Z'
+    depth: 1
+  - url: https://www.mohawkgroup.com/hospitality
+    title: Durkan Hospitality | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: VIEW THE HOTELS & RESORTS LOOKBOOK
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 458.234375
+          'y': 966.5
+          width: 363.515625
+          height: 47
+      - selector: a.cta-list-item__container.layout-red
+        type: link
+        text: |-
+          link
+          Public Spaces
+        href: https://www.mohawkgroup.com/public-spaces
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 20
+          'y': 1158.5
+          width: 413.328125
+          height: 371.984375
+      - selector: button.type-white-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 383.328125
+          'y': 1178.5
+          width: 30
+          height: 30
+      - selector: a.cta-list-item__container.layout-red
+        type: link
+        text: |-
+          link
+          Guest rooms
+        href: https://www.mohawkgroup.com/guest-rooms
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 433.328125
+          'y': 1158.5
+          width: 413.328125
+          height: 371.984375
+      - selector: button.type-white-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 796.65625
+          'y': 1178.5
+          width: 30
+          height: 30
+      - selector: a.cta-list-item__container.layout-red
+        type: link
+        text: |-
+          link
+          Corridors
+        href: https://www.mohawkgroup.com/corridors
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 846.65625
+          'y': 1158.5
+          width: 413.328125
+          height: 371.984375
+      - selector: button.type-white-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1209.984375
+          'y': 1178.5
+          width: 30
+          height: 30
+      - selector: a
+        type: link
+        text: VIEW THE COLLECTION
+        href: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 936
+          'y': 2014.484375
+          width: 173
+          height: 52
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/hospitality
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/hospitality
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://www.mohawkgroup.com/public-spaces
+        text: |-
+          link
+          Public Spaces
+        selector: a[href="/public-spaces"]
+        internal: true
+      - href: https://www.mohawkgroup.com/guest-rooms
+        text: |-
+          link
+          Guest rooms
+        selector: a[href="/guest-rooms"]
+        internal: true
+      - href: https://www.mohawkgroup.com/corridors
+        text: |-
+          link
+          Corridors
+        selector: a[href="/corridors"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        text: VIEW THE COLLECTION
+        selector: a[href="/products/soft-surface/collections/custom-collections/natureverse"]
+        internal: true
+    timestamp: '2025-12-26T22:09:15.362Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/education
+    title: Education | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: DOWNLOAD THE EDUCATION BROCHURE
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 461.984375
+          'y': 1044
+          width: 356.03125
+          height: 47
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/education
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/education
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+    timestamp: '2025-12-26T22:09:16.844Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/workplace
+    title: Workplace | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: EXPLORE ALL WORKPLACE COLLECTIONS
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 461.234375
+          'y': 846
+          width: 357.53125
+          height: 47
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/workplace
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/workplace
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+    timestamp: '2025-12-26T22:09:22.156Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/senior-living
+    title: Senior Living | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: DOWNLOAD THE SENIOR LIVING BROCHURE
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 451.921875
+          'y': 912
+          width: 376.140625
+          height: 47
+      - selector: a
+        type: link
+        text: LEARN MORE
+        href: https://act.alz.org/site/TR?company_id=326728&pg=national_company&pw_id=15048
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 329.4375
+          'y': 1567
+          width: 120.125
+          height: 36
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 454.5625
+          'y': 1567.5
+          width: 30
+          height: 30
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/senior-living
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/senior-living
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://act.alz.org/site/TR?company_id=326728&pg=national_company&pw_id=15048
+        text: LEARN MORE
+        selector: a[href="https://act.alz.org/site/TR?company_id=326728&pg=national_company&pw_id=15048"]
+        internal: false
+    timestamp: '2025-12-26T22:09:27.436Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/healthcare
+    title: Healthcare | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: EXPLORE ALL HEALTHCARE COLLECTIONS
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 458.6875
+          'y': 1011
+          width: 362.625
+          height: 47
+      - selector: a.cta-list-item__container.layout-white
+        type: link
+        text: Acute Care & Hospitals
+        href: https://www.mohawkgroup.com/healthcare/acute-care
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 30
+          'y': 1203
+          width: 304.25
+          height: 364.25
+      - selector: a.cta-list-item__container.layout-white
+        type: link
+        text: Outpatient & Urgent Care
+        href: https://www.mohawkgroup.com/healthcare/outpatient-urgent-care
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 335.25
+          'y': 1203
+          width: 304.25
+          height: 394.25
+      - selector: a.cta-list-item__container.layout-white
+        type: link
+        text: Medical Office Buildings
+        href: https://www.mohawkgroup.com/healthcare/medical-office
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 640.5
+          'y': 1203
+          width: 304.25
+          height: 364.25
+      - selector: a.cta-list-item__container.layout-white
+        type: link
+        text: Behavioral Health
+        href: https://www.mohawkgroup.com/products/soft-surface?product_type=Carpet%20Tile
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 945.75
+          'y': 1203
+          width: 304.25
+          height: 364.25
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/healthcare
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/healthcare
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://www.mohawkgroup.com/healthcare/acute-care
+        text: Acute Care & Hospitals
+        selector: a[href="/healthcare/acute-care"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare/outpatient-urgent-care
+        text: Outpatient & Urgent Care
+        selector: a[href="/healthcare/outpatient-urgent-care"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare/medical-office
+        text: Medical Office Buildings
+        selector: a[href="/healthcare/medical-office"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/soft-surface?product_type=Carpet%20Tile
+        text: Behavioral Health
+        selector: a[href="/products/soft-surface?product_type=Carpet%20Tile"]
+        internal: true
+    timestamp: '2025-12-26T22:09:32.369Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/government
+    title: Government | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: EXPLORE ALL GOVERNMENT COLLECTIONS
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 455.03125
+          'y': 1044
+          width: 369.9375
+          height: 47
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/government
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/government
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+    timestamp: '2025-12-26T22:09:37.426Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/retail
+    title: Retail | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: DOWNLOAD THE RETAIL BROCHURE
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 479.71875
+          'y': 834.5
+          width: 320.546875
+          height: 47
+      - selector: '[aria-label="Go to slide 1"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 584
+          'y': 2327.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 2"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 608
+          'y': 2327.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 3"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 3
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 632
+          'y': 2327.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 4"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 4
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 656
+          'y': 2327.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 5"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 680
+          'y': 2327.5
+          width: 16
+          height: 16
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/projects/latest-projects/another-broken-egg-cafe
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: -697.5
+          'y': 1711.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/projects/latest-projects/neiman-marcus
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 202.5
+          'y': 1711.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/projects/latest-projects/la-z-boy-casegood-showroom
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1102.5
+          'y': 1711.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/projects/latest-projects/nordstrom-rack-skyview-mall
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 2002.5
+          'y': 1711.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/projects/latest-projects/salon-republic
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 2902.5
+          'y': 1711.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/projects/latest-projects/another-broken-egg-cafe
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 3802.5
+          'y': 1711.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/projects/latest-projects/neiman-marcus
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 4702.5
+          'y': 1711.5
+          width: 875
+          height: 575
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/retail
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/retail
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://www.mohawkgroup.com/projects/latest-projects/another-broken-egg-cafe
+        text: ''
+        selector: a[href="/projects/latest-projects/another-broken-egg-cafe"]
+        internal: true
+      - href: https://www.mohawkgroup.com/projects/latest-projects/neiman-marcus
+        text: ''
+        selector: a[href="/projects/latest-projects/neiman-marcus"]
+        internal: true
+      - href: https://www.mohawkgroup.com/projects/latest-projects/la-z-boy-casegood-showroom
+        text: ''
+        selector: a[href="/projects/latest-projects/la-z-boy-casegood-showroom"]
+        internal: true
+      - href: https://www.mohawkgroup.com/projects/latest-projects/nordstrom-rack-skyview-mall
+        text: ''
+        selector: a[href="/projects/latest-projects/nordstrom-rack-skyview-mall"]
+        internal: true
+      - href: https://www.mohawkgroup.com/projects/latest-projects/salon-republic
+        text: ''
+        selector: a[href="/projects/latest-projects/salon-republic"]
+        internal: true
+      - href: https://www.mohawkgroup.com/projects/latest-projects/another-broken-egg-cafe
+        text: ''
+        selector: a[href="/projects/latest-projects/another-broken-egg-cafe"]
+        internal: true
+      - href: https://www.mohawkgroup.com/projects/latest-projects/neiman-marcus
+        text: ''
+        selector: a[href="/projects/latest-projects/neiman-marcus"]
+        internal: true
+    timestamp: '2025-12-26T22:09:42.005Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/aviation
+    title: Aviation | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: a.link-compound.text-link
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 330
+          'y': 859
+          width: 620
+          height: 5
+      - selector: a.cta-list-item__container.layout-red
+        type: link
+        text: |-
+          link
+          Running Line Woven
+        href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_aviation_segment_brochure
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 20
+          'y': 1546
+          width: 413.328125
+          height: 371.984375
+      - selector: button.type-white-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 383.328125
+          'y': 1566
+          width: 30
+          height: 30
+      - selector: a.cta-list-item__container.layout-red
+        type: link
+        text: |-
+          link
+          Custom Woven
+        href: https://www.mohawkgroup.com/products/custom-woven
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 433.328125
+          'y': 1546
+          width: 413.328125
+          height: 371.984375
+      - selector: button.type-white-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 796.65625
+          'y': 1566
+          width: 30
+          height: 30
+      - selector: a.cta-list-item__container.layout-red
+        type: link
+        text: |-
+          link
+          Aviation Colors
+        href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_aviation_colors_segment_brochure
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 846.65625
+          'y': 1546
+          width: 413.328125
+          height: 371.984375
+      - selector: button.type-white-bordered.size-small
+        type: button
+        text: link
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1209.984375
+          'y': 1566
+          width: 30
+          height: 30
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: Download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 197
+          'y': 2255.859375
+          width: 190
+          height: 43
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: Download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 847
+          'y': 2255.859375
+          width: 190
+          height: 43
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: Download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 197
+          'y': 2465.234375
+          width: 190
+          height: 43
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: Download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 847
+          'y': 2470.859375
+          width: 190
+          height: 43
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: Download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 197
+          'y': 2685.859375
+          width: 190
+          height: 43
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: Download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 847
+          'y': 2685.859375
+          width: 190
+          height: 43
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: Download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 197
+          'y': 2900.859375
+          width: 190
+          height: 43
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/aviation
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/aviation
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href=""]
+        internal: true
+      - href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_aviation_segment_brochure
+        text: |-
+          link
+          Running Line Woven
+        selector: a[href="https://s7d4.scene7.com/is/content/MohawkResidential/mhg_aviation_segment_brochure"]
+        internal: false
+      - href: https://www.mohawkgroup.com/products/custom-woven
+        text: |-
+          link
+          Custom Woven
+        selector: a[href="/products/custom-woven"]
+        internal: true
+      - href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_aviation_colors_segment_brochure
+        text: |-
+          link
+          Aviation Colors
+        selector: a[href="https://s7d4.scene7.com/is/content/MohawkResidential/mhg_aviation_colors_segment_brochure"]
+        internal: false
+    timestamp: '2025-12-26T22:09:43.700Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/multifamily
+    title: Multi-Family | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: button.link-compound.icon_position-left
+        type: button
+        text: DOWNLOAD THE SOLUTIONS BROCHURE
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 462.828125
+          'y': 879
+          width: 354.34375
+          height: 47
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/multifamily
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/multifamily
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+    timestamp: '2025-12-26T22:09:49.533Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+    title: Living Local | LVT Collection | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: a.link-compound.text-link
+        type: link
+        text: |-
+          Living Local Brochure
+          download
+        href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_LivingLocal_collection_brochure
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 359.1875
+          'y': 544
+          width: 182.609375
+          height: 34.5
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 359.1875
+          'y': 544
+          width: 30
+          height: 30
+      - selector: a.link-compound.text-link
+        type: link
+        text: |-
+          Stones Brochure
+          download
+        href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_living_local_stones_collection_brochure
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 581.796875
+          'y': 544
+          width: 149.703125
+          height: 34.5
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 581.796875
+          'y': 544
+          width: 30
+          height: 30
+      - selector: a.link-compound.text-link
+        type: link
+        text: |-
+          Woods Brochure
+          download
+        href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_living_local_woods_collection_brochure
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 771.5
+          'y': 544
+          width: 149.3125
+          height: 34.5
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 771.5
+          'y': 544
+          width: 30
+          height: 30
+      - selector: '[aria-label="Go to slide 1"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 524
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 2"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 548
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 3"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 3
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 572
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 4"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 4
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 596
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 5"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 620
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 6"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 6
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 644
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 7"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 7
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 668
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 8"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 8
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 692
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 9"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 9
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 716
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 10"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 10
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 740
+          'y': 1254.5
+          width: 16
+          height: 16
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_966_332?scl=5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: -697.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_225_room_00?scl=2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 202.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63290_832_room_00?scl=2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1102.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/64002_870_room_00?scl=3.5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 2002.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/64001_665_room_00?scl=4.5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 2902.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63306_865_room_00?scl=2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 3802.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/63159_440_room_00?scl=3.5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 4702.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_141?scl=3.5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5602.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_727_945_room_00?scl=2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 6502.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_958?scl=4.5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 7402.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_966_332?scl=5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 8302.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_225_room_00?scl=2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 9202.5
+          'y': 638.5
+          width: 875
+          height: 575
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 1473.5
+          width: 366.65625
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Stones 4.5
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 1703.890625
+          width: 109.21875
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: >-
+          https://www.mohawkgroup.com/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 1473.5
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Stones 2.5
+        href: >-
+          https://www.mohawkgroup.com/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 1703.890625
+          width: 108.890625
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 1473.5
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Woods 4.5
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 1703.890625
+          width: 108.4375
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 1811.890625
+          width: 366.65625
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Woods 2.5
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 2042.28125
+          width: 108.109375
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 1811.890625
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Chromascope
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 2042.28125
+          width: 140.984375
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 1811.890625
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Optic Hues
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 2042.28125
+          width: 114.90625
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 2150.28125
+          width: 366.65625
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Stonework
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 2380.671875
+          width: 112.15625
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 2150.28125
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Terrazzo
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 2380.671875
+          width: 85.890625
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 2150.28125
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: Premium Wood
+        href: https://www.mohawkgroup.com/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 2380.671875
+          width: 157.40625
+          height: 29
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_LivingLocal_collection_brochure
+        text: |-
+          Living Local Brochure
+          download
+        selector: a[href="https://s7d4.scene7.com/is/content/MohawkResidential/mhg_LivingLocal_collection_brochure"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_living_local_stones_collection_brochure
+        text: |-
+          Stones Brochure
+          download
+        selector: a[href="https://s7d4.scene7.com/is/content/MohawkResidential/mhg_living_local_stones_collection_brochure"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_living_local_woods_collection_brochure
+        text: |-
+          Woods Brochure
+          download
+        selector: a[href="https://s7d4.scene7.com/is/content/MohawkResidential/mhg_living_local_woods_collection_brochure"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_966_332?scl=5
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_966_332?scl=5"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_225_room_00?scl=2
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_225_room_00?scl=2"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63290_832_room_00?scl=2
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63290_832_room_00?scl=2"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/64002_870_room_00?scl=3.5
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/64002_870_room_00?scl=3.5"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/64001_665_room_00?scl=4.5
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/64001_665_room_00?scl=4.5"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63306_865_room_00?scl=2
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63306_865_room_00?scl=2"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/63159_440_room_00?scl=3.5
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/63159_440_room_00?scl=3.5"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_141?scl=3.5
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_141?scl=3.5"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_727_945_room_00?scl=2
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_727_945_room_00?scl=2"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_958?scl=4.5
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_958?scl=4.5"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_966_332?scl=5
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/LivingLocal_966_332?scl=5"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_225_room_00?scl=2
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/mhg_63307_225_room_00?scl=2"]
+        internal: false
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224
+        text: Stones 4.5
+        selector: a[href="/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2118/Stones_4_5?cc=225&cn=Chiseled%20Edge&size=1224"]
+        internal: true
+      - href: >-
+          https://www.mohawkgroup.com/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V"]
+        internal: true
+      - href: >-
+          https://www.mohawkgroup.com/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V
+        text: Stones 2.5
+        selector: a[href="/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V"]
+        internal: true
+      - href: >-
+          https://www.mohawkgroup.com/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2119/Stones_2_5?cc=615&cn=Tumbled%20Finish&size=1224V"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59
+        text: Woods 4.5
+        selector: a[href="/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2120/Woods_4_5?cc=838&cn=Cumberland&size=09A59"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V
+        text: Woods 2.5
+        selector: a[href="/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C2121/Woods_2_5?cc=095&cn=Studio&size=0748V"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224
+        text: Chromascope
+        selector: a[href="/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0159/Chromascope?cc=120&cn=Alabaster&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224
+        text: Optic Hues
+        selector: a[href="/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0178/Optic_Hues?cc=415&cn=Fresco&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224
+        text: Stonework
+        selector: a[href="/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0179/Stonework?cc=225&cn=Chiseled%20Edge&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224
+        text: Terrazzo
+        selector: a[href="/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0180/Terrazzo?cc=585&cn=Mascali&size=1224"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D
+        text: Premium Wood
+        selector: a[href="/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D"]
+        internal: true
+      - href: https://www.mohawkgroup.com/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D
+        text: ''
+        selector: a[href="/products/hard-surface/detail/C0194/Premium_Wood?cc=332&cn=Cedar&size=07C51D"]
+        internal: true
+    timestamp: '2025-12-26T22:09:55.524Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/product-index
+    title: Product Index | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: input.emailBox
+        type: input
+        text: ''
+        inputType: email
+        placeholder: Enter email address
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 319.09375
+          'y': 550
+          width: 250
+          height: 40
+      - selector: button.submit.disable
+        type: button
+        text: SUBMIT
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 579.09375
+          'y': 550
+          width: 150
+          height: 40
+      - selector: input.FARBox
+        type: input
+        text: ''
+        inputType: number
+        placeholder: Enter Zip Code
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 825.453125
+          'y': 550
+          width: 200
+          height: 40
+      - selector: a.text
+        type: link
+        text: Mohawk Group EMEA
+        href: https://www.mohawkgroup.eu/en
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1052.71875
+          'y': 562
+          width: 187.265625
+          height: 26
+      - selector: a.text
+        type: link
+        text: Daltile
+        href: https://www.daltile.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1052.71875
+          'y': 588
+          width: 187.265625
+          height: 26
+      - selector: a.text
+        type: link
+        text: Marazzi
+        href: https://www.marazziusa.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1052.71875
+          'y': 614
+          width: 187.265625
+          height: 26
+      - selector: a.text
+        type: link
+        text: Godfrey Hirst
+        href: https://www.godfreyhirst.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1052.71875
+          'y': 640
+          width: 187.265625
+          height: 26
+      - selector: a.text
+        type: link
+        text: Mohawk Industries
+        href: https://mohawkind.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 75
+          'y': 674
+          width: 126.890625
+          height: 16
+      - selector: a.text
+        type: link
+        text: Mohawk Xchange
+        href: https://mohawkxchange.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 221.890625
+          'y': 674
+          width: 115.046875
+          height: 16
+      - selector: a.text
+        type: link
+        text: Legal Notice
+        href: https://mohawkind.com/legal.php
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 356.9375
+          'y': 674
+          width: 83.359375
+          height: 16
+      - selector: a.text
+        type: link
+        text: Privacy Policy
+        href: https://mohawkind.com/privacy-policy.php
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 460.296875
+          'y': 674
+          width: 92.859375
+          height: 16
+      - selector: a.text
+        type: link
+        text: Patents
+        href: https://www.unilintechnologies.com/en/mohawk
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 573.15625
+          'y': 674
+          width: 52.46875
+          height: 16
+      - selector: a.text
+        type: link
+        text: ISO Flow Down Requirements
+        href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_as9100_mohawk_flow_down_requirements
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 65
+          'y': 674
+          width: 681.1875
+          height: 40
+      - selector: a.text
+        type: link
+        text: AB 1305
+        href: https://www.mohawkgroup.com/AB1305
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 178.234375
+          'y': 698
+          width: 54.46875
+          height: 16
+      - selector: a.phone-number
+        type: link
+        text: 800.622.6228
+        href: tel:800.622.6228
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 939.875
+          'y': 674
+          width: 92.953125
+          height: 16
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/product-index
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/product-index
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://www.mohawkgroup.eu/en
+        text: Mohawk Group EMEA
+        selector: a[href="https://www.mohawkgroup.eu/en"]
+        internal: false
+      - href: https://www.daltile.com/
+        text: Daltile
+        selector: a[href="https://www.daltile.com/"]
+        internal: false
+      - href: https://www.marazziusa.com/
+        text: Marazzi
+        selector: a[href="https://www.marazziusa.com/"]
+        internal: false
+      - href: https://www.godfreyhirst.com/
+        text: Godfrey Hirst
+        selector: a[href="https://www.godfreyhirst.com/"]
+        internal: false
+      - href: https://mohawkind.com/
+        text: Mohawk Industries
+        selector: a[href="https://mohawkind.com/"]
+        internal: false
+      - href: https://mohawkxchange.com/
+        text: Mohawk Xchange
+        selector: a[href="https://mohawkxchange.com/"]
+        internal: false
+      - href: https://mohawkind.com/legal.php
+        text: Legal Notice
+        selector: a[href="https://mohawkind.com/legal.php"]
+        internal: false
+      - href: https://mohawkind.com/privacy-policy.php
+        text: Privacy Policy
+        selector: a[href="https://mohawkind.com/privacy-policy.php"]
+        internal: false
+      - href: https://www.unilintechnologies.com/en/mohawk
+        text: Patents
+        selector: a[href="https://www.unilintechnologies.com/en/mohawk"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/content/MohawkResidential/mhg_as9100_mohawk_flow_down_requirements
+        text: ISO Flow Down Requirements
+        selector: a[href=" https://s7d4.scene7.com/is/content/MohawkResidential/mhg_as9100_mohawk_flow_down_requirements"]
+        internal: false
+      - href: https://www.mohawkgroup.com/AB1305
+        text: AB 1305
+        selector: a[href="https://www.mohawkgroup.com/AB1305"]
+        internal: true
+      - href: tel:800.622.6228
+        text: 800.622.6228
+        selector: a[href="tel:800.622.6228"]
+        internal: false
+    timestamp: '2025-12-26T22:10:00.638Z'
+    depth: 2
+  - url: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+    title: Natureverse | Durkan Hospitality Custom Collection | Mohawk Group
+    elements:
+      - selector: a
+        type: link
+        text: Durkan Hospitality
+        href: https://www.mohawkgroup.com/hospitality
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 90.859375
+          'y': 4.375
+          width: 132.359375
+          height: 18
+      - selector: a
+        type: link
+        text: Education
+        href: https://www.mohawkgroup.com/education
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 243.75
+          'y': 4.375
+          width: 70.296875
+          height: 18
+      - selector: a
+        type: link
+        text: Workplace
+        href: https://www.mohawkgroup.com/workplace
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 334.578125
+          'y': 4.375
+          width: 73.6875
+          height: 18
+      - selector: a
+        type: link
+        text: Senior Living
+        href: https://www.mohawkgroup.com/senior-living
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 428.796875
+          'y': 4.375
+          width: 93.890625
+          height: 18
+      - selector: a
+        type: link
+        text: Healthcare
+        href: https://www.mohawkgroup.com/healthcare
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 543.21875
+          'y': 4.375
+          width: 77.4375
+          height: 18
+      - selector: a
+        type: link
+        text: Government
+        href: https://www.mohawkgroup.com/government
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 641.1875
+          'y': 4.375
+          width: 85.203125
+          height: 18
+      - selector: a
+        type: link
+        text: Retail
+        href: https://www.mohawkgroup.com/retail
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 746.921875
+          'y': 4.375
+          width: 40.9375
+          height: 18
+      - selector: a
+        type: link
+        text: Aviation
+        href: https://www.mohawkgroup.com/aviation
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 808.390625
+          'y': 4.375
+          width: 58.25
+          height: 18
+      - selector: a
+        type: link
+        text: Multi-Family
+        href: https://www.mohawkgroup.com/multifamily
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 887.171875
+          'y': 4.375
+          width: 86.71875
+          height: 18
+      - selector: a.promologo
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5
+          'y': 49.5
+          width: 255
+          height: 25
+      - selector: '[aria-label="Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT"]'
+        type: link
+        text: ''
+        ariaLabel: Hero Flooring – Hero Rubber + Nike Grind | Wood | Carpet | Turf | Tile | LVT
+        href: https://www.heroflooring.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 917.140625
+          'y': 43.5
+          width: 71
+          height: 37
+      - selector: a.link-compound.text-link
+        type: link
+        text: |-
+          Collection Brochure
+          download
+        href: https://s7d4.scene7.com/is/content/MohawkResidential/durkan_natureverse_collection_brochure
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 554.421875
+          'y': 520
+          width: 171.15625
+          height: 34.5
+      - selector: button.type-pink-bordered.size-small
+        type: button
+        text: download
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 554.421875
+          'y': 520
+          width: 30
+          height: 30
+      - selector: '[aria-label="Go to slide 1"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 560
+          'y': 1230.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 2"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 2
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 584
+          'y': 1230.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 3"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 3
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 608
+          'y': 1230.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 4"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 4
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 632
+          'y': 1230.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 5"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 5
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 656
+          'y': 1230.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 6"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 6
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 680
+          'y': 1230.5
+          width: 16
+          height: 16
+      - selector: '[aria-label="Go to slide 7"]'
+        type: button
+        text: ''
+        ariaLabel: Go to slide 7
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 704
+          'y': 1230.5
+          width: 16
+          height: 16
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107623_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: -697.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107624_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 202.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW106117_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1102.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_12CBDP57_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 2002.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_12PMDL56_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 2902.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_12CBDP82_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 3802.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_D106136_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 4702.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107623_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 5602.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: a.overlay
+        type: link
+        text: ''
+        href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107624_00?scl=1
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 6502.5
+          'y': 614.5
+          width: 875
+          height: 575
+      - selector: button
+        type: button
+        text: |-
+          filters
+          Filter
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 1060.234375
+          'y': 1394.5
+          width: 119.765625
+          height: 35
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/156874
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 1459.5
+          width: 366.65625
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW106103
+        href: https://ps.mohawkgroup.com/products/show/156874
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 1689.890625
+          width: 123.984375
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/154582
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 1459.5
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW106105
+        href: https://ps.mohawkgroup.com/products/show/154582
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 1689.890625
+          width: 124.09375
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/154574
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 1459.5
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW106117
+        href: https://ps.mohawkgroup.com/products/show/154574
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 1689.890625
+          width: 117.171875
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/177844
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 1797.890625
+          width: 366.65625
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW106111
+        href: https://ps.mohawkgroup.com/products/show/177844
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 2028.28125
+          width: 114.546875
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/167706
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 1797.890625
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW106139
+        href: https://ps.mohawkgroup.com/products/show/167706
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 2028.28125
+          width: 122.578125
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/167708
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 1797.890625
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW106126
+        href: https://ps.mohawkgroup.com/products/show/167708
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 2028.28125
+          width: 121.921875
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/176325
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 2136.28125
+          width: 366.65625
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW107624
+        href: https://ps.mohawkgroup.com/products/show/176325
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 70
+          'y': 2366.671875
+          width: 123.59375
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://ps.mohawkgroup.com/products/show/167700
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 2136.28125
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: QTW106140
+        href: https://ps.mohawkgroup.com/products/show/167700
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 456.65625
+          'y': 2366.671875
+          width: 124.609375
+          height: 29
+      - selector: a.product-card__img
+        type: link
+        text: ''
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 2136.28125
+          width: 366.671875
+          height: 220.390625
+      - selector: a.product-card__description--title
+        type: link
+        text: 12CBDP82
+        href: https://www.mohawkgroup.com/
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 843.328125
+          'y': 2366.671875
+          width: 106.375
+          height: 29
+      - selector: button.btn-load
+        type: button
+        text: LOAD MORE
+        inputType: submit
+        required: false
+        visible: true
+        interactable: true
+        bounds:
+          x: 582.421875
+          'y': 2461.671875
+          width: 115.15625
+          height: 46
+    forms:
+      - selector: form:nth-of-type(1)
+        action: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        method: get
+        inputs: []
+      - selector: form:nth-of-type(2)
+        action: https://www.mohawkgroup.com/products/soft-surface/collections/custom-collections/natureverse
+        method: get
+        inputs:
+          - selector: form:nth-of-type(2) input
+            type: input
+            name: ''
+            inputType: text
+            placeholder: Search
+            required: false
+            visible: true
+            interactable: true
+            bounds:
+              x: 0
+              'y': 0
+              width: 0
+              height: 0
+              top: 0
+              right: 0
+              bottom: 0
+              left: 0
+    links:
+      - href: https://www.mohawkgroup.com/
+        text: USA
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.mohawkgroup.com/hospitality
+        text: Durkan Hospitality
+        selector: a[href="/hospitality"]
+        internal: true
+      - href: https://www.mohawkgroup.com/education
+        text: Education
+        selector: a[href="/education"]
+        internal: true
+      - href: https://www.mohawkgroup.com/workplace
+        text: Workplace
+        selector: a[href="/workplace"]
+        internal: true
+      - href: https://www.mohawkgroup.com/senior-living
+        text: Senior Living
+        selector: a[href="/senior-living"]
+        internal: true
+      - href: https://www.mohawkgroup.com/healthcare
+        text: Healthcare
+        selector: a[href="/healthcare"]
+        internal: true
+      - href: https://www.mohawkgroup.com/government
+        text: Government
+        selector: a[href="/government"]
+        internal: true
+      - href: https://www.mohawkgroup.com/retail
+        text: Retail
+        selector: a[href="/retail"]
+        internal: true
+      - href: https://www.mohawkgroup.com/aviation
+        text: Aviation
+        selector: a[href="/aviation"]
+        internal: true
+      - href: https://www.mohawkgroup.com/multifamily
+        text: Multi-Family
+        selector: a[href="/multifamily"]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href="/"]
+        internal: true
+      - href: https://www.heroflooring.com/
+        text: ''
+        selector: a[href="https://www.heroflooring.com"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/content/MohawkResidential/durkan_natureverse_collection_brochure
+        text: |-
+          Collection Brochure
+          download
+        selector: a[href="https://s7d4.scene7.com/is/content/MohawkResidential/durkan_natureverse_collection_brochure"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107623_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107623_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107624_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107624_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW106117_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW106117_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_12CBDP57_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_12CBDP57_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_12PMDL56_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_12PMDL56_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_12CBDP82_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_12CBDP82_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_D106136_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_D106136_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107623_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107623_00?scl=1"]
+        internal: false
+      - href: https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107624_00?scl=1
+        text: ''
+        selector: a[href="https://s7d4.scene7.com/is/image/MohawkResidential/room_QTW107624_00?scl=1"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/156874
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/156874"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/156874
+        text: QTW106103
+        selector: a[href="https://ps.mohawkgroup.com/products/show/156874"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/156874
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/156874"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/154582
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/154582"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/154582
+        text: QTW106105
+        selector: a[href="https://ps.mohawkgroup.com/products/show/154582"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/154582
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/154582"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/154574
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/154574"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/154574
+        text: QTW106117
+        selector: a[href="https://ps.mohawkgroup.com/products/show/154574"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/154574
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/154574"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/177844
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/177844"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/177844
+        text: QTW106111
+        selector: a[href="https://ps.mohawkgroup.com/products/show/177844"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/177844
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/177844"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167706
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167706"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167706
+        text: QTW106139
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167706"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167706
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167706"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167708
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167708"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167708
+        text: QTW106126
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167708"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167708
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167708"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/176325
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/176325"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/176325
+        text: QTW107624
+        selector: a[href="https://ps.mohawkgroup.com/products/show/176325"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/176325
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/176325"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167700
+        text: ''
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167700"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167700
+        text: QTW106140
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167700"]
+        internal: false
+      - href: https://ps.mohawkgroup.com/products/show/167700
+        text: Personalize
+        selector: a[href="https://ps.mohawkgroup.com/products/show/167700"]
+        internal: false
+      - href: https://www.mohawkgroup.com/
+        text: ''
+        selector: a[href=""]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: 12CBDP82
+        selector: a[href=""]
+        internal: true
+      - href: https://www.mohawkgroup.com/
+        text: Personalize
+        selector: a[href=""]
+        internal: true
+    timestamp: '2025-12-26T22:10:06.599Z'
+    depth: 2
+flows:
+  - name: Search Flow
+    type: search
+    confidence: 0.8
+    steps:
+      - action: goto
+        url: https://www.mohawkgroup.com
+        description: Navigate to search page
+      - action: fill
+        selector: form:nth-of-type(2) input
+        value: ${searchTerm}
+        description: Enter search term
+      - action: press
+        key: Enter
+        description: Press Enter to search
+      - action: waitForLoadState
+        state: networkidle
+        description: Wait for search results
+generatedAt: '2025-12-26T22:11:06.761Z'
+stats:
+  pagesScanned: 14
+  elementsFound: 340
+  formsFound: 28
+  linksFound: 295

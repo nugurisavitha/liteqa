@@ -1,0 +1,141 @@
+# ============================================================================
+# Performance Test: Add to Cart (Sample Request)
+# Site: Mohawk Group (www.mohawkgroup.com)
+# Functionality: Browse products and add samples to cart/project
+# ============================================================================
+
+name: Add to Cart Performance Test
+description: Performance testing for product browsing and sample request flow
+runner: performance
+
+steps:
+  # -------------------------------------------------------------------------
+  # Step 1: Load Test - Product Index Page
+  # -------------------------------------------------------------------------
+  - action: loadTest
+    description: Load test product catalog page with concurrent users
+    targetUrl: https://www.mohawkgroup.com/product-index
+    method: GET
+    virtualUsers: 50
+    duration: 30
+    rampUp: 5
+    assertions:
+      - metric: avgResponseTime
+        operator: '<'
+        value: 3000
+      - metric: p95
+        operator: '<'
+        value: 5000
+      - metric: errorRate
+        operator: '<'
+        value: 1
+
+  # -------------------------------------------------------------------------
+  # Step 2: Page Performance - Product Index
+  # -------------------------------------------------------------------------
+  - action: pagePerformance
+    description: Measure Web Vitals for product catalog page
+    url: https://www.mohawkgroup.com/product-index
+    waitForNetworkIdle: true
+    thresholds:
+      lcp: 3000
+      fcp: 2000
+      ttfb: 800
+      cls: 0.15
+
+  # -------------------------------------------------------------------------
+  # Step 3: Load Test - Product Collection Page
+  # -------------------------------------------------------------------------
+  - action: loadTest
+    description: Load test a specific product collection
+    targetUrl: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+    method: GET
+    virtualUsers: 50
+    duration: 30
+    rampUp: 5
+    assertions:
+      - metric: avgResponseTime
+        operator: '<'
+        value: 3000
+      - metric: p95
+        operator: '<'
+        value: 5000
+      - metric: errorRate
+        operator: '<'
+        value: 1
+
+  # -------------------------------------------------------------------------
+  # Step 4: Page Performance - Product Collection
+  # -------------------------------------------------------------------------
+  - action: pagePerformance
+    description: Measure Web Vitals for product collection page
+    url: https://www.mohawkgroup.com/products/hard-surface/collections/living-local
+    waitForNetworkIdle: true
+    thresholds:
+      lcp: 3000
+      fcp: 2000
+      ttfb: 800
+      cls: 0.1
+
+  # -------------------------------------------------------------------------
+  # Step 5: Load Test - Sample Cart/Project Page
+  # -------------------------------------------------------------------------
+  - action: loadTest
+    description: Load test sample cart page in Personal Studio
+    targetUrl: https://ps.mohawkgroup.com/cart
+    method: GET
+    virtualUsers: 30
+    duration: 30
+    rampUp: 5
+    assertions:
+      - metric: avgResponseTime
+        operator: '<'
+        value: 2500
+      - metric: errorRate
+        operator: '<'
+        value: 2
+
+  # -------------------------------------------------------------------------
+  # Step 6: API Performance - Add Sample to Cart
+  # -------------------------------------------------------------------------
+  - action: apiPerformance
+    description: Test add to cart API endpoint
+    url: https://ps.mohawkgroup.com/api/cart/add
+    method: POST
+    headers:
+      Content-Type: application/json
+    body:
+      productId: "LVL-001"
+      productName: "Living Local - Hardwood"
+      quantity: 1
+      type: "sample"
+    iterations: 30
+    thresholds:
+      avgResponseTime: 1500
+      p95: 3000
+      errorRate: 5
+
+  # -------------------------------------------------------------------------
+  # Step 7: API Performance - Get Cart Contents
+  # -------------------------------------------------------------------------
+  - action: apiPerformance
+    description: Test get cart API endpoint
+    url: https://ps.mohawkgroup.com/api/cart
+    method: GET
+    iterations: 50
+    thresholds:
+      avgResponseTime: 1000
+      p95: 2000
+      errorRate: 1
+
+  # -------------------------------------------------------------------------
+  # Step 8: Page Performance - Checkout/Submit Request
+  # -------------------------------------------------------------------------
+  - action: pagePerformance
+    description: Measure Web Vitals for sample request submission page
+    url: https://ps.mohawkgroup.com/cart/checkout
+    thresholds:
+      lcp: 2500
+      fcp: 1800
+      ttfb: 600
+      cls: 0.1

@@ -1,0 +1,95 @@
+# ============================================================================
+# Performance Test: User Registration
+# Site: Mohawk Group (www.mohawkgroup.com)
+# Functionality: Create new user account via Personal Studio
+# ============================================================================
+
+name: User Registration Performance Test
+description: Performance testing for user registration flow on Mohawk Group Personal Studio
+runner: performance
+
+steps:
+  # -------------------------------------------------------------------------
+  # Step 1: Load Test - Registration Page
+  # -------------------------------------------------------------------------
+  - action: loadTest
+    description: Load test registration page with concurrent users
+    targetUrl: https://ps.mohawkgroup.com/users/register
+    method: GET
+    virtualUsers: 50
+    duration: 30
+    rampUp: 5
+    assertions:
+      - metric: avgResponseTime
+        operator: '<'
+        value: 3000
+      - metric: p95
+        operator: '<'
+        value: 5000
+      - metric: errorRate
+        operator: '<'
+        value: 2
+
+  # -------------------------------------------------------------------------
+  # Step 2: Page Performance - Registration Form
+  # -------------------------------------------------------------------------
+  - action: pagePerformance
+    description: Measure Web Vitals for registration page
+    url: https://ps.mohawkgroup.com/users/register
+    waitForNetworkIdle: true
+    thresholds:
+      lcp: 2500
+      fcp: 1800
+      ttfb: 800
+      cls: 0.1
+
+  # -------------------------------------------------------------------------
+  # Step 3: API Performance - Registration Endpoint
+  # -------------------------------------------------------------------------
+  - action: apiPerformance
+    description: Test registration API endpoint response time
+    url: https://ps.mohawkgroup.com/api/users/register
+    method: POST
+    headers:
+      Content-Type: application/json
+    body:
+      email: testuser@example.com
+      firstName: Test
+      lastName: User
+      company: Test Company
+      password: TestPassword123
+    iterations: 20
+    thresholds:
+      avgResponseTime: 2000
+      p95: 4000
+      errorRate: 5
+
+  # -------------------------------------------------------------------------
+  # Step 4: Load Test - Login Page
+  # -------------------------------------------------------------------------
+  - action: loadTest
+    description: Load test login page after registration
+    targetUrl: https://ps.mohawkgroup.com/users/login
+    method: GET
+    virtualUsers: 50
+    duration: 30
+    rampUp: 5
+    assertions:
+      - metric: avgResponseTime
+        operator: '<'
+        value: 2000
+      - metric: errorRate
+        operator: '<'
+        value: 1
+
+  # -------------------------------------------------------------------------
+  # Step 5: Page Performance - Login Page
+  # -------------------------------------------------------------------------
+  - action: pagePerformance
+    description: Measure Web Vitals for login page
+    url: https://ps.mohawkgroup.com/users/login
+    thresholds:
+      lcp: 2500
+      fcp: 1800
+      ttfb: 600
+      cls: 0.1

@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiteQA - Visual Test Builder</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Override main app styles for builder page */
+    #app {
+      display: block !important;
+    }
+
+    main {
+      margin-left: 0 !important;
+      padding: 24px;
+    }
+
+    /* Visual Builder Specific Styles */
+    .builder-container {
+      display: grid;
+      grid-template-columns: 300px 1fr 350px;
+      gap: 20px;
+      height: calc(100vh - 100px);
+    }
+
+    .builder-sidebar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .builder-main {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .builder-preview {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      overflow-y: auto;
+    }
+
+    /* Action Cards */
+    .action-category {
+      margin-bottom: 20px;
+    }
+
+    .action-category h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .action-card {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 12px;
+      margin-bottom: 8px;
+      cursor: grab;
+      transition: var(--transition);
+    }
+
+    .action-card:hover {
+      border-color: var(--primary);
+      transform: translateX(4px);
+    }
+
+    .action-card-title {
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .action-card-title .icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      color: white;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+
+    .action-card-desc {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    /* Steps List */
+    .steps-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .steps-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    .step-item {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .step-item.dragging {
+      opacity: 0.5;
+    }
+
+    .step-item-header {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      background: var(--bg-secondary);
+    }
+
+    .step-item-header:hover {
+      background: var(--bg-tertiary);
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
+    .step-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .step-action {
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .step-desc {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .step-actions {
+      display: flex;
+      gap: 4px;
+    }
+
+    .step-actions button {
+      width: 28px;
+      height: 28px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-actions button:hover {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    .step-actions button.delete:hover {
+      color: var(--danger);
+    }
+
+    .step-item-body {
+      padding: 16px;
+      border-top: 1px solid var(--border-color);
+      display: none;
+    }
+
+    .step-item.expanded .step-item-body {
+      display: block;
+    }
+
+    /* Form Fields */
+    .form-row {
+      margin-bottom: 16px;
+    }
+
+    .form-row label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      padding: 10px 12px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      color: var(--text-primary);
+      font-size: 0.875rem;
+    }
+
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-hint {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Test Info Form */
+    .test-info {
+      padding: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .test-info h3 {
+      margin-bottom: 16px;
+    }
+
+    /* Preview Panel */
+    .preview-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .preview-content {
+      padding: 16px;
+      font-family: 'Monaco', 'Menlo', monospace;
+      font-size: 0.75rem;
+      white-space: pre-wrap;
+      color: var(--text-secondary);
+    }
+
+    /* Empty State */
+    .empty-steps {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-steps svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 16px;
+      opacity: 0.5;
+    }
+
+    .empty-steps p {
+      margin-bottom: 8px;
+    }
+
+    /* Drop Zone */
+    .drop-zone {
+      border: 2px dashed var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-muted);
+      margin: 16px;
+      transition: var(--transition);
+    }
+
+    .drop-zone.drag-over {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    /* Toolbar */
+    .builder-toolbar {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    /* Quick Add Modal */
+    .quick-add-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 24px;
+      width: 500px;
+      max-height: 80vh;
+      overflow-y: auto;
+      z-index: 1001;
+      display: none;
+    }
+
+    .quick-add-modal.active {
+      display: block;
+    }
+
+    .quick-add-modal h3 {
+      margin-bottom: 20px;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      display: none;
+    }
+
+    .modal-backdrop.active {
+      display: block;
+    }
+
+    /* Action Type Selector */
+    .action-type-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .action-type-option {
+      padding: 16px;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .action-type-option:hover {
+      border-color: var(--primary-light);
+    }
+
+    .action-type-option.selected {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    .action-type-option .icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .action-type-option .label {
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    /* Success Animation */
+    @keyframes stepAdded {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .step-item.just-added {
+      animation: stepAdded 0.3s ease;
+    }
+
+    /* Recording Panel Styles */
+    .recording-panel {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .recording-panel h2 {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .recording-panel .subtitle {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .record-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .record-url-input {
+      flex: 1;
+      max-width: 400px;
+      padding: 14px 16px;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+
+    .record-url-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .btn-record {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-record.start {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+      color: white;
+    }
+
+    .btn-record.start:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+    }
+
+    .btn-record.stop {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+    }
+
+    .btn-record.stop:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+    }
+
+    .btn-record:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .recording-status {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      padding: 16px;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 8px;
+    }
+
+    .recording-status.active {
+      display: flex;
+    }
+
+    .recording-dot {
+      width: 12px;
+      height: 12px;
+      background: #ef4444;
+      border-radius: 50%;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
+    .recording-status .message {
+      font-weight: 600;
+      color: #ef4444;
+    }
+
+    .recording-status .step-count {
+      color: var(--text-muted);
+    }
+
+    .recorded-action {
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 12px;
+      font-size: 0.875rem;
+      color: #22c55e;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .method-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 24px;
+      padding: 4px;
+      background: var(--bg-tertiary);
+      border-radius: 8px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .method-tab {
+      padding: 10px 20px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .method-tab:hover {
+      color: var(--text-primary);
+    }
+
+    .method-tab.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .method-content {
+      display: none;
+    }
+
+    .method-content.active {
+      display: block;
+    }
+  </style>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Simplified Header for Builder -->
+    <header style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="/" style="color: var(--primary-light); text-decoration: none; font-size: 1.25rem; font-weight: 700;">LiteQA</a>
+        <span style="color: var(--text-muted);">/</span>
+        <span style="font-weight: 600;">Visual Test Builder</span>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <button class="btn btn-secondary" onclick="builder.clearAll()">Clear All</button>
+        <button class="btn btn-secondary" onclick="builder.loadExisting()">Load Existing</button>
+        <button class="btn btn-primary" onclick="builder.saveTest()">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          Save Test
+        </button>
+      </div>
+    </header>
+
+    <main style="padding: 24px;">
+      <!-- Recording Panel - Primary Method -->
+      <div class="recording-panel">
+        <h2>
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+          </svg>
+          Record Your Test
+        </h2>
+        <p class="subtitle">Enter a URL, click Start, perform your actions in the browser, then click Stop to generate your test.</p>
+
+        <div class="record-controls">
+          <input type="text"
+                 id="record-url"
+                 class="record-url-input"
+                 placeholder="https://www.example.com"
+                 value="https://www.mohawkgroup.com">
+
+          <button class="btn-record start" id="btn-start-record" onclick="builder.startRecording()">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <circle cx="12" cy="12" r="8"></circle>
+            </svg>
+            Start Recording
+          </button>
+
+          <button class="btn-record stop" id="btn-stop-record" onclick="builder.stopRecording()" style="display: none;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <rect x="6" y="6" width="12" height="12" rx="2"></rect>
+            </svg>
+            Stop Recording
+          </button>
+        </div>
+
+        <div class="recording-status" id="recording-status">
+          <span class="recording-dot"></span>
+          <span class="message">Recording in progress...</span>
+          <span class="step-count" id="recorded-step-count">0 actions captured</span>
+        </div>
+
+        <div id="last-recorded-action"></div>
+      </div>
+
+      <!-- Method Tabs -->
+      <div class="method-tabs">
+        <button class="method-tab active" onclick="builder.switchMethod('record')">
+          Record Mode
+        </button>
+        <button class="method-tab" onclick="builder.switchMethod('manual')">
+          Manual Mode
+        </button>
+      </div>
+
+      <div class="builder-container">
+        <!-- Left Sidebar - Available Actions -->
+        <div class="builder-sidebar" id="manual-sidebar">
+          <h3 style="margin-bottom: 20px;">Available Actions</h3>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 20px;">
+            Click on an action to add it to your test, or drag and drop.
+          </p>
+
+          <div class="action-category">
+            <h4>Navigation</h4>
+            <div class="action-card" data-action="goto" onclick="builder.addStep('goto')">
+              <div class="action-card-title">
+                <span class="icon">1</span>
+                Go to URL
+              </div>
+              <div class="action-card-desc">Navigate to a web page</div>
+            </div>
+            <div class="action-card" data-action="waitForLoadState" onclick="builder.addStep('waitForLoadState')">
+              <div class="action-card-title">
+                <span class="icon">2</span>
+                Wait for Page Load
+              </div>
+              <div class="action-card-desc">Wait until page is fully loaded</div>
+            </div>
+          </div>
+
+          <div class="action-category">
+            <h4>Click & Input</h4>
+            <div class="action-card" data-action="click" onclick="builder.addStep('click')">
+              <div class="action-card-title">
+                <span class="icon">3</span>
+                Click Element
+              </div>
+              <div class="action-card-desc">Click on a button, link, or element</div>
+            </div>
+            <div class="action-card" data-action="fill" onclick="builder.addStep('fill')">
+              <div class="action-card-title">
+                <span class="icon">4</span>
+                Fill Text Field
+              </div>
+              <div class="action-card-desc">Enter text in an input field</div>
+            </div>
+            <div class="action-card" data-action="select" onclick="builder.addStep('select')">
+              <div class="action-card-title">
+                <span class="icon">5</span>
+                Select Dropdown
+              </div>
+              <div class="action-card-desc">Select an option from dropdown</div>
+            </div>
+            <div class="action-card" data-action="hover" onclick="builder.addStep('hover')">
+              <div class="action-card-title">
+                <span class="icon">6</span>
+                Hover Over Element
+              </div>
+              <div class="action-card-desc">Move mouse over an element</div>
+            </div>
+          </div>
+
+          <div class="action-category">
+            <h4>Verification</h4>
+            <div class="action-card" data-action="expectVisible" onclick="builder.addStep('expectVisible')">
+              <div class="action-card-title">
+                <span class="icon">7</span>
+                Check Element Visible
+              </div>
+              <div class="action-card-desc">Verify an element is visible</div>
+            </div>
+            <div class="action-card" data-action="expectText" onclick="builder.addStep('expectText')">
+              <div class="action-card-title">
+                <span class="icon">8</span>
+                Check Text Content
+              </div>
+              <div class="action-card-desc">Verify element contains text</div>
+            </div>
+          </div>
+
+          <div class="action-category">
+            <h4>Wait & Screenshot</h4>
+            <div class="action-card" data-action="wait" onclick="builder.addStep('wait')">
+              <div class="action-card-title">
+                <span class="icon">9</span>
+                Wait (Pause)
+              </div>
+              <div class="action-card-desc">Pause execution for specified time</div>
+            </div>
+            <div class="action-card" data-action="screenshot" onclick="builder.addStep('screenshot')">
+              <div class="action-card-title">
+                <span class="icon">10</span>
+                Take Screenshot
+              </div>
+              <div class="action-card-desc">Capture a screenshot of the page</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Area - Test Steps -->
+        <div class="builder-main">
+          <div class="test-info">
+            <h3>Test Information</h3>
+            <div class="form-row">
+              <label>Test Name</label>
+              <input type="text" id="test-name" placeholder="e.g., Homepage Smoke Test" value="My New Test">
+            </div>
+            <div class="form-row">
+              <label>Description</label>
+              <input type="text" id="test-description" placeholder="e.g., Verify homepage loads correctly">
+            </div>
+            <div class="form-row">
+              <label>Base URL</label>
+              <input type="text" id="test-baseurl" placeholder="e.g., https://www.mohawkgroup.com" value="https://www.mohawkgroup.com">
+              <div class="form-hint">The starting URL for your test</div>
+            </div>
+          </div>
+
+          <div class="steps-header">
+            <h3>Test Steps <span id="step-count" style="color: var(--text-muted); font-weight: normal;">(0 steps)</span></h3>
+            <button class="btn btn-sm btn-primary" onclick="builder.showQuickAdd()">
+              + Add Step
+            </button>
+          </div>
+
+          <div class="steps-list" id="steps-list">
+            <div class="empty-steps" id="empty-steps">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+              </svg>
+              <p><strong>No steps added yet</strong></p>
+              <p>Click on an action from the left panel to add your first step</p>
+            </div>
+          </div>
+
+          <div class="builder-toolbar">
+            <button class="btn btn-secondary" onclick="builder.runTest()">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Run Test
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Sidebar - Preview -->
+        <div class="builder-preview">
+          <div class="preview-header">
+            <h3>Generated YAML Preview</h3>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+              This is the test file that will be created
+            </p>
+          </div>
+          <pre class="preview-content" id="yaml-preview"># Your test will appear here...</pre>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Quick Add Modal -->
+  <div class="modal-backdrop" id="modal-backdrop" onclick="builder.hideQuickAdd()"></div>
+  <div class="quick-add-modal" id="quick-add-modal">
+    <h3>Add New Step</h3>
+
+    <div class="form-row">
+      <label>What do you want to do?</label>
+      <select id="quick-action-type" onchange="builder.updateQuickAddForm()">
+        <option value="">-- Select an action --</option>
+        <optgroup label="Navigation">
+          <option value="goto">Go to URL - Navigate to a web page</option>
+          <option value="waitForLoadState">Wait for Page Load - Wait until page loads</option>
+        </optgroup>
+        <optgroup label="Click & Input">
+          <option value="click">Click Element - Click on button/link</option>
+          <option value="fill">Fill Text Field - Enter text in input</option>
+          <option value="select">Select Dropdown - Choose dropdown option</option>
+          <option value="hover">Hover Over Element - Mouse over element</option>
+        </optgroup>
+        <optgroup label="Verification">
+          <option value="expectVisible">Check Element Visible - Verify element shows</option>
+          <option value="expectText">Check Text Content - Verify text exists</option>
+        </optgroup>
+        <optgroup label="Wait & Screenshot">
+          <option value="wait">Wait (Pause) - Pause for some time</option>
+          <option value="screenshot">Take Screenshot - Capture the page</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div id="quick-add-fields"></div>
+
+    <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
+      <button class="btn btn-secondary" onclick="builder.hideQuickAdd()">Cancel</button>
+      <button class="btn btn-primary" onclick="builder.confirmQuickAdd()">Add Step</button>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <script>
+    /**
+     * Visual Test Builder for Manual QA Team
+     */
+    class TestBuilder {
+      constructor() {
+        this.steps = [];
+        this.stepId = 0;
+        this.actionConfigs = {
+          goto: {
+            label: 'Go to URL',
+            icon: '1',
+            fields: [
+              { name: 'url', label: 'URL', type: 'text', placeholder: 'https://www.example.com', required: true, hint: 'The web address to navigate to' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Navigate to homepage', hint: 'Describe what this step does' }
+            ]
+          },
+          waitForLoadState: {
+            label: 'Wait for Page Load',
+            icon: '2',
+            fields: [
+              { name: 'state', label: 'Wait Until', type: 'select', options: [
+                { value: 'load', label: 'Page Loaded' },
+                { value: 'domcontentloaded', label: 'DOM Ready' },
+                { value: 'networkidle', label: 'Network Idle (slowest but safest)' }
+              ], hint: 'When to consider the page loaded' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Wait for page to load' }
+            ]
+          },
+          click: {
+            label: 'Click Element',
+            icon: '3',
+            fields: [
+              { name: 'selector', label: 'Element to Click', type: 'text', placeholder: 'button, #submit-btn, .login-button', required: true, hint: 'CSS selector, button text, or element ID' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Click login button' }
+            ]
+          },
+          fill: {
+            label: 'Fill Text Field',
+            icon: '4',
+            fields: [
+              { name: 'selector', label: 'Input Field', type: 'text', placeholder: '#email, input[name="username"]', required: true, hint: 'The input field to fill' },
+              { name: 'value', label: 'Text to Enter', type: 'text', placeholder: 'test@example.com', required: true, hint: 'The text to type in the field' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Enter email address' }
+            ]
+          },
+          select: {
+            label: 'Select Dropdown',
+            icon: '5',
+            fields: [
+              { name: 'selector', label: 'Dropdown Element', type: 'text', placeholder: '#country, select[name="state"]', required: true },
+              { name: 'value', label: 'Option to Select', type: 'text', placeholder: 'United States', required: true, hint: 'The option value or text' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Select country' }
+            ]
+          },
+          hover: {
+            label: 'Hover Over Element',
+            icon: '6',
+            fields: [
+              { name: 'selector', label: 'Element to Hover', type: 'text', placeholder: '.menu-item, #dropdown-trigger', required: true },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Hover over menu' }
+            ]
+          },
+          expectVisible: {
+            label: 'Check Element Visible',
+            icon: '7',
+            fields: [
+              { name: 'selector', label: 'Element to Check', type: 'text', placeholder: '.success-message, #welcome-banner', required: true, hint: 'Verify this element is visible on page' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Verify success message appears' }
+            ]
+          },
+          expectText: {
+            label: 'Check Text Content',
+            icon: '8',
+            fields: [
+              { name: 'selector', label: 'Element to Check', type: 'text', placeholder: 'h1, .title, #message', required: true },
+              { name: 'text', label: 'Expected Text', type: 'text', placeholder: 'Welcome!', required: true, hint: 'The text that should be in the element' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Verify welcome message' }
+            ]
+          },
+          wait: {
+            label: 'Wait (Pause)',
+            icon: '9',
+            fields: [
+              { name: 'duration', label: 'Wait Time (milliseconds)', type: 'number', placeholder: '1000', required: true, hint: '1000 = 1 second, 2000 = 2 seconds' },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Wait for animation' }
+            ]
+          },
+          screenshot: {
+            label: 'Take Screenshot',
+            icon: '10',
+            fields: [
+              { name: 'name', label: 'Screenshot Name', type: 'text', placeholder: 'homepage', required: true, hint: 'Name for the screenshot file' },
+              { name: 'fullPage', label: 'Capture Full Page?', type: 'select', options: [
+                { value: 'true', label: 'Yes - Capture entire page' },
+                { value: 'false', label: 'No - Only visible area' }
+              ] },
+              { name: 'description', label: 'Description', type: 'text', placeholder: 'Capture homepage screenshot' }
+            ]
+          }
+        };
+
+        this.init();
+      }
+
+      init() {
+        this.updatePreview();
+        this.updateStepCount();
+      }
+
+      addStep(action, values = {}) {
+        const config = this.actionConfigs[action];
+        if (!config) return;
+
+        const step = {
+          id: ++this.stepId,
+          action: action,
+          config: config,
+          values: values
+        };
+
+        this.steps.push(step);
+        this.renderSteps();
+        this.updatePreview();
+        this.updateStepCount();
+        this.showToast(`Added: ${config.label}`, 'success');
+      }
+
+      renderSteps() {
+        const container = document.getElementById('steps-list');
+        const emptyState = document.getElementById('empty-steps');
+
+        if (this.steps.length === 0) {
+          emptyState.style.display = 'block';
+          return;
+        }
+
+        emptyState.style.display = 'none';
+
+        const stepsHtml = this.steps.map((step, index) => {
+          const config = step.config;
+          const desc = step.values.description || this.getDefaultDescription(step);
+
+          return `
+            <div class="step-item just-added" data-id="${step.id}">
+              <div class="step-item-header" onclick="builder.toggleStep(${step.id})">
+                <span class="step-number">${index + 1}</span>
+                <div class="step-info">
+                  <div class="step-action">${config.label}</div>
+                  <div class="step-desc">${desc}</div>
+                </div>
+                <div class="step-actions">
+                  <button onclick="event.stopPropagation(); builder.moveStep(${step.id}, -1)" title="Move Up">↑</button>
+                  <button onclick="event.stopPropagation(); builder.moveStep(${step.id}, 1)" title="Move Down">↓</button>
+                  <button onclick="event.stopPropagation(); builder.duplicateStep(${step.id})" title="Duplicate">⧉</button>
+                  <button class="delete" onclick="event.stopPropagation(); builder.deleteStep(${step.id})" title="Delete">×</button>
+                </div>
+              </div>
+              <div class="step-item-body">
+                ${this.renderStepFields(step)}
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        container.innerHTML = stepsHtml;
+
+        // Remove animation class after animation
+        setTimeout(() => {
+          document.querySelectorAll('.just-added').forEach(el => el.classList.remove('just-added'));
+        }, 300);
+      }
+
+      renderStepFields(step) {
+        const config = step.config;
+        return config.fields.map(field => {
+          const value = step.values[field.name] || '';
+
+          if (field.type === 'select') {
+            const options = field.options.map(opt =>
+              `<option value="${opt.value}" ${value === opt.value ? 'selected' : ''}>${opt.label}</option>`
+            ).join('');
+            return `
+              <div class="form-row">
+                <label>${field.label}</label>
+                <select onchange="builder.updateStepValue(${step.id}, '${field.name}', this.value)">
+                  ${options}
+                </select>
+                ${field.hint ? `<div class="form-hint">${field.hint}</div>` : ''}
+              </div>
+            `;
+          }
+
+          return `
+            <div class="form-row">
+              <label>${field.label}${field.required ? ' *' : ''}</label>
+              <input type="${field.type || 'text'}"
+                     value="${value}"
+                     placeholder="${field.placeholder || ''}"
+                     onchange="builder.updateStepValue(${step.id}, '${field.name}', this.value)">
+              ${field.hint ? `<div class="form-hint">${field.hint}</div>` : ''}
+            </div>
+          `;
+        }).join('');
+      }
+
+      getDefaultDescription(step) {
+        const v = step.values;
+        switch (step.action) {
+          case 'goto': return v.url || 'Navigate to URL';
+          case 'click': return v.selector || 'Click element';
+          case 'fill': return v.selector ? `Fill ${v.selector}` : 'Fill input';
+          case 'expectVisible': return v.selector || 'Check element visible';
+          case 'expectText': return v.text ? `Verify "${v.text}"` : 'Check text';
+          case 'wait': return v.duration ? `Wait ${v.duration}ms` : 'Wait';
+          case 'screenshot': return v.name || 'Take screenshot';
+          default: return step.config.label;
+        }
+      }
+
+      toggleStep(id) {
+        const stepEl = document.querySelector(`.step-item[data-id="${id}"]`);
+        if (stepEl) {
+          stepEl.classList.toggle('expanded');
+        }
+      }
+
+      updateStepValue(id, field, value) {
+        const step = this.steps.find(s => s.id === id);
+        if (step) {
+          step.values[field] = value;
+          this.updatePreview();
+          // Update description display
+          const stepEl = document.querySelector(`.step-item[data-id="${id}"] .step-desc`);
+          if (stepEl) {
+            stepEl.textContent = step.values.description || this.getDefaultDescription(step);
+          }
+        }
+      }
+
+      moveStep(id, direction) {
+        const index = this.steps.findIndex(s => s.id === id);
+        if (index === -1) return;
+
+        const newIndex = index + direction;
+        if (newIndex < 0 || newIndex >= this.steps.length) return;
+
+        const temp = this.steps[index];
+        this.steps[index] = this.steps[newIndex];
+        this.steps[newIndex] = temp;
+
+        this.renderSteps();
+        this.updatePreview();
+      }
+
+      duplicateStep(id) {
+        const step = this.steps.find(s => s.id === id);
+        if (step) {
+          this.addStep(step.action, { ...step.values });
+        }
+      }
+
+      deleteStep(id) {
+        this.steps = this.steps.filter(s => s.id !== id);
+        this.renderSteps();
+        this.updatePreview();
+        this.updateStepCount();
+        this.showToast('Step deleted', 'info');
+      }
+
+      updateStepCount() {
+        document.getElementById('step-count').textContent = `(${this.steps.length} steps)`;
+      }
+
+      updatePreview() {
+        const name = document.getElementById('test-name').value || 'My New Test';
+        const description = document.getElementById('test-description').value || '';
+        const baseUrl = document.getElementById('test-baseurl').value || '';
+
+        let yaml = `# ${name}\n`;
+        yaml += `# ${'='.repeat(name.length)}\n\n`;
+        yaml += `name: ${name}\n`;
+        if (description) yaml += `description: ${description}\n`;
+        yaml += `runner: web\n\n`;
+        yaml += `steps:\n`;
+
+        if (this.steps.length === 0) {
+          yaml += `  # Add steps using the visual builder\n`;
+        } else {
+          this.steps.forEach(step => {
+            yaml += this.stepToYaml(step);
+          });
+        }
+
+        document.getElementById('yaml-preview').textContent = yaml;
+      }
+
+      stepToYaml(step) {
+        const v = step.values;
+        let yaml = `  - action: ${step.action}\n`;
+
+        switch (step.action) {
+          case 'goto':
+            yaml += `    url: ${v.url || 'https://example.com'}\n`;
+            yaml += `    waitUntil: load\n`;
+            break;
+          case 'waitForLoadState':
+            yaml += `    state: ${v.state || 'load'}\n`;
+            break;
+          case 'click':
+          case 'hover':
+          case 'expectVisible':
+            yaml += `    selector: '${v.selector || 'element'}'\n`;
+            break;
+          case 'fill':
+            yaml += `    selector: '${v.selector || 'input'}'\n`;
+            yaml += `    value: '${v.value || ''}'\n`;
+            break;
+          case 'select':
+            yaml += `    selector: '${v.selector || 'select'}'\n`;
+            yaml += `    value: '${v.value || ''}'\n`;
+            break;
+          case 'expectText':
+            yaml += `    selector: '${v.selector || 'element'}'\n`;
+            yaml += `    text: '${v.text || ''}'\n`;
+            break;
+          case 'wait':
+            yaml += `    duration: ${v.duration || 1000}\n`;
+            break;
+          case 'screenshot':
+            yaml += `    name: ${v.name || 'screenshot'}\n`;
+            yaml += `    fullPage: ${v.fullPage === 'true'}\n`;
+            break;
+        }
+
+        if (v.description) {
+          yaml += `    description: ${v.description}\n`;
+        }
+
+        yaml += `\n`;
+        return yaml;
+      }
+
+      showQuickAdd() {
+        document.getElementById('modal-backdrop').classList.add('active');
+        document.getElementById('quick-add-modal').classList.add('active');
+        document.getElementById('quick-action-type').value = '';
+        document.getElementById('quick-add-fields').innerHTML = '';
+      }
+
+      hideQuickAdd() {
+        document.getElementById('modal-backdrop').classList.remove('active');
+        document.getElementById('quick-add-modal').classList.remove('active');
+      }
+
+      updateQuickAddForm() {
+        const action = document.getElementById('quick-action-type').value;
+        const fieldsContainer = document.getElementById('quick-add-fields');
+
+        if (!action) {
+          fieldsContainer.innerHTML = '';
+          return;
+        }
+
+        const config = this.actionConfigs[action];
+        fieldsContainer.innerHTML = config.fields.map(field => {
+          if (field.type === 'select') {
+            const options = field.options.map(opt =>
+              `<option value="${opt.value}">${opt.label}</option>`
+            ).join('');
+            return `
+              <div class="form-row">
+                <label>${field.label}</label>
+                <select id="quick-${field.name}">
+                  ${options}
+                </select>
+                ${field.hint ? `<div class="form-hint">${field.hint}</div>` : ''}
+              </div>
+            `;
+          }
+          return `
+            <div class="form-row">
+              <label>${field.label}${field.required ? ' *' : ''}</label>
+              <input type="${field.type || 'text'}"
+                     id="quick-${field.name}"
+                     placeholder="${field.placeholder || ''}">
+              ${field.hint ? `<div class="form-hint">${field.hint}</div>` : ''}
+            </div>
+          `;
+        }).join('');
+      }
+
+      confirmQuickAdd() {
+        const action = document.getElementById('quick-action-type').value;
+        if (!action) {
+          this.showToast('Please select an action', 'error');
+          return;
+        }
+
+        const config = this.actionConfigs[action];
+        const values = {};
+
+        for (const field of config.fields) {
+          const input = document.getElementById(`quick-${field.name}`);
+          if (input) {
+            values[field.name] = input.value;
+          }
+
+          if (field.required && !values[field.name]) {
+            this.showToast(`${field.label} is required`, 'error');
+            return;
+          }
+        }
+
+        this.addStep(action, values);
+        this.hideQuickAdd();
+      }
+
+      async saveTest() {
+        const name = document.getElementById('test-name').value.trim();
+        if (!name) {
+          this.showToast('Please enter a test name', 'error');
+          return;
+        }
+
+        if (this.steps.length === 0) {
+          this.showToast('Please add at least one step', 'error');
+          return;
+        }
+
+        // Check if project is selected
+        if (!this.currentProject) {
+          this.showToast('Please select a project first', 'error');
+          return;
+        }
+
+        // Generate filename
+        const filename = name.toLowerCase().replace(/[^a-z0-9]+/g, '_');
+
+        // Generate YAML content
+        const yaml = document.getElementById('yaml-preview').textContent;
+
+        try {
+          const response = await fetch(`/api/projects/${this.currentProject}/flows`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: filename, content: yaml })
+          });
+
+          if (response.ok) {
+            this.showToast(`Test saved: ${filename}.yaml to ${this.currentProject}`, 'success');
+          } else {
+            const error = await response.json();
+            this.showToast(error.error || 'Failed to save', 'error');
+          }
+        } catch (err) {
+          this.showToast('Failed to save test', 'error');
+        }
+      }
+
+      async runTest() {
+        if (this.steps.length === 0) {
+          this.showToast('Please add steps first', 'error');
+          return;
+        }
+
+        // First save the test
+        await this.saveTest();
+
+        // Then redirect to runner
+        const name = document.getElementById('test-name').value.trim();
+        const filename = name.toLowerCase().replace(/[^a-z0-9]+/g, '_');
+        window.location.href = `/?view=runner&flow=${filename}.yaml`;
+      }
+
+      clearAll() {
+        if (this.steps.length === 0) return;
+
+        if (confirm('Are you sure you want to clear all steps?')) {
+          this.steps = [];
+          this.renderSteps();
+          this.updatePreview();
+          this.updateStepCount();
+          this.showToast('All steps cleared', 'info');
+        }
+      }
+
+      async loadExisting() {
+        try {
+          const response = await fetch('/api/flows');
+          const flows = await response.json();
+
+          if (flows.length === 0) {
+            this.showToast('No existing tests found', 'info');
+            return;
+          }
+
+          const flowList = flows.map(f => `${f.name} (${f.file})`).join('\n');
+          const selected = prompt(`Enter the filename to load:\n\n${flowList}`);
+
+          if (selected) {
+            const flow = flows.find(f => f.file === selected || f.file === `${selected}.yaml`);
+            if (flow) {
+              window.location.href = `/?view=editor&flow=${flow.file}`;
+            }
+          }
+        } catch (err) {
+          this.showToast('Failed to load flows', 'error');
+        }
+      }
+
+      showToast(message, type = 'info') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        container.appendChild(toast);
+
+        setTimeout(() => {
+          toast.remove();
+        }, 3000);
+      }
+
+      // ==========================================
+      // Recording Methods
+      // ==========================================
+
+      initSocket() {
+        this.socket = io();
+        this.isRecording = false;
+        this.recordedActions = [];
+
+        // Socket event handlers
+        this.socket.on('connect', () => {
+          console.log('Connected to server');
+        });
+
+        this.socket.on('record:started', () => {
+          this.showToast('Recording started - perform actions in the browser', 'success');
+        });
+
+        this.socket.on('record:action', (data) => {
+          this.handleRecordedAction(data);
+        });
+
+        this.socket.on('record:stopped', (data) => {
+          this.handleRecordingStopped(data);
+        });
+
+        this.socket.on('record:error', (data) => {
+          this.showToast(`Recording error: ${data.error}`, 'error');
+          this.resetRecordingUI();
+        });
+      }
+
+      startRecording() {
+        const url = document.getElementById('record-url').value.trim();
+        if (!url) {
+          this.showToast('Please enter a URL to record', 'error');
+          return;
+        }
+
+        if (!url.startsWith('http://') && !url.startsWith('https://')) {
+          this.showToast('Please enter a valid URL starting with http:// or https://', 'error');
+          return;
+        }
+
+        this.isRecording = true;
+        this.recordedActions = [];
+
+        // Update UI
+        document.getElementById('btn-start-record').style.display = 'none';
+        document.getElementById('btn-stop-record').style.display = 'inline-flex';
+        document.getElementById('recording-status').classList.add('active');
+        document.getElementById('record-url').disabled = true;
+        document.getElementById('recorded-step-count').textContent = '0 actions captured';
+        document.getElementById('last-recorded-action').innerHTML = '';
+
+        // Clear previous steps if any
+        if (this.steps.length > 0) {
+          if (confirm('Clear existing steps before recording?')) {
+            this.steps = [];
+            this.renderSteps();
+            this.updatePreview();
+            this.updateStepCount();
+          }
+        }
+
+        // Start recording via socket
+        this.socket.emit('record:start', { url });
+        this.showToast('Opening browser... Please wait', 'info');
+      }
+
+      stopRecording() {
+        if (!this.isRecording) return;
+
+        this.socket.emit('record:stop');
+        this.showToast('Stopping recording...', 'info');
+      }
+
+      handleRecordedAction(data) {
+        this.recordedActions.push(data);
+
+        // Update counter
+        document.getElementById('recorded-step-count').textContent =
+          `${this.recordedActions.length} action${this.recordedActions.length > 1 ? 's' : ''} captured`;
+
+        // Show last action
+        const lastActionDiv = document.getElementById('last-recorded-action');
+        lastActionDiv.innerHTML = `
+          <div class="recorded-action">
+            Last: <strong>${data.action}</strong> - ${data.description || data.selector || data.url || ''}
+          </div>
+        `;
+
+        // Add step to the builder
+        this.addRecordedStep(data);
+      }
+
+      addRecordedStep(data) {
+        const actionMap = {
+          'goto': 'goto',
+          'click': 'click',
+          'fill': 'fill',
+          'type': 'fill',
+          'select': 'select',
+          'hover': 'hover',
+          'navigation': 'goto'
+        };
+
+        const action = actionMap[data.action] || data.action;
+        if (!this.actionConfigs[action]) {
+          console.log('Unknown action:', data.action);
+          return;
+        }
+
+        const values = {};
+
+        switch (action) {
+          case 'goto':
+            values.url = data.url;
+            values.description = `Navigate to ${new URL(data.url).pathname || '/'}`;
+            break;
+          case 'click':
+            values.selector = data.selector;
+            values.description = data.description || `Click on ${data.text || data.selector}`;
+            break;
+          case 'fill':
+            values.selector = data.selector;
+            values.value = data.value;
+            values.description = `Enter "${data.value}" in ${data.selector}`;
+            break;
+          case 'select':
+            values.selector = data.selector;
+            values.value = data.value;
+            values.description = `Select "${data.value}"`;
+            break;
+          case 'hover':
+            values.selector = data.selector;
+            values.description = `Hover over ${data.selector}`;
+            break;
+        }
+
+        this.addStep(action, values);
+      }
+
+      handleRecordingStopped(data) {
+        this.isRecording = false;
+        this.resetRecordingUI();
+
+        if (data.actions && data.actions.length > 0) {
+          this.showToast(`Recording complete! ${data.actions.length} actions captured.`, 'success');
+        } else if (this.recordedActions.length > 0) {
+          this.showToast(`Recording complete! ${this.recordedActions.length} actions captured.`, 'success');
+        } else {
+          this.showToast('Recording complete. No actions were captured.', 'info');
+        }
+      }
+
+      resetRecordingUI() {
+        document.getElementById('btn-start-record').style.display = 'inline-flex';
+        document.getElementById('btn-stop-record').style.display = 'none';
+        document.getElementById('recording-status').classList.remove('active');
+        document.getElementById('record-url').disabled = false;
+      }
+
+      switchMethod(method) {
+        const tabs = document.querySelectorAll('.method-tab');
+        tabs.forEach((tab, index) => {
+          if ((method === 'record' && index === 0) || (method === 'manual' && index === 1)) {
+            tab.classList.add('active');
+          } else {
+            tab.classList.remove('active');
+          }
+        });
+
+        // Toggle recording panel visibility
+        const recordingPanel = document.querySelector('.recording-panel');
+        if (method === 'record') {
+          recordingPanel.style.display = 'block';
+        } else {
+          recordingPanel.style.display = 'none';
+        }
+      }
+
+      // ==========================================
+      // Project Management
+      // ==========================================
+
+      async initProject() {
+        // Get project from URL parameter
+        const params = new URLSearchParams(window.location.search);
+        this.currentProject = params.get('project');
+
+        // Load projects for selector
+        await this.loadProjects();
+
+        // If no project specified and projects exist, prompt to select
+        if (!this.currentProject && this.projects.length > 0) {
+          this.currentProject = this.projects[0].name;
+        }
+
+        // Update base URL from project
+        if (this.currentProject) {
+          const project = this.projects.find(p => p.name === this.currentProject);
+          if (project && project.baseUrl) {
+            document.getElementById('test-baseurl').value = project.baseUrl;
+            document.getElementById('record-url').value = project.baseUrl;
+          }
+        }
+      }
+
+      async loadProjects() {
+        try {
+          this.projects = await fetch('/api/projects').then(r => r.json());
+
+          // Add project selector to header if not exists
+          if (this.projects.length > 0 && !document.getElementById('project-selector')) {
+            const header = document.querySelector('header');
+            const logoDiv = header.querySelector('div');
+
+            const selectorHtml = `
+              <select id="project-selector" style="margin-left: 16px; padding: 8px 12px; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary);" onchange="builder.switchProject(this.value)">
+                ${this.projects.map(p => `<option value="${p.name}" ${p.name === this.currentProject ? 'selected' : ''}>${p.displayName}</option>`).join('')}
+              </select>
+            `;
+            logoDiv.insertAdjacentHTML('beforeend', selectorHtml);
+          }
+        } catch (err) {
+          console.error('Failed to load projects:', err);
+        }
+      }
+
+      switchProject(projectName) {
+        this.currentProject = projectName;
+        const project = this.projects.find(p => p.name === projectName);
+        if (project && project.baseUrl) {
+          document.getElementById('test-baseurl').value = project.baseUrl;
+          document.getElementById('record-url').value = project.baseUrl;
+        }
+        // Update URL
+        const url = new URL(window.location.href);
+        url.searchParams.set('project', projectName);
+        window.history.replaceState({}, '', url);
+      }
+    }
+
+    // Initialize builder
+    const builder = new TestBuilder();
+    builder.initSocket();
+    builder.initProject();
+
+    // Update preview when test info changes
+    document.getElementById('test-name').addEventListener('input', () => builder.updatePreview());
+    document.getElementById('test-description').addEventListener('input', () => builder.updatePreview());
+    document.getElementById('test-baseurl').addEventListener('input', () => builder.updatePreview());
+  </script>
+</body>
+</html>

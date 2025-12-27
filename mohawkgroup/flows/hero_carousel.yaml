@@ -1,0 +1,95 @@
+# Mohawk Group - Hero Carousel Test
+# ==================================
+
+name: Hero Carousel Interaction
+description: Test hero carousel navigation and slide functionality
+runner: web
+
+steps:
+  # Navigate to homepage
+  - action: goto
+    url: https://www.mohawkgroup.com
+    waitUntil: networkidle
+    description: Navigate to homepage
+
+  - action: waitForLoadState
+    state: networkidle
+    description: Wait for page to fully load
+
+  # Verify carousel controls are visible
+  - action: expectVisible
+    selector: '[aria-label="Next slide"]'
+    description: Verify next slide button is visible
+
+  - action: expectVisible
+    selector: '[aria-label="Previous slide"]'
+    description: Verify previous slide button is visible
+
+  # Take screenshot of initial slide
+  - action: screenshot
+    name: carousel-slide-1
+    description: Capture first carousel slide
+
+  # Click next slide
+  - action: click
+    selector: '[aria-label="Next slide"]'
+    description: Click next slide button
+
+  - action: wait
+    duration: 1000
+    description: Wait for slide transition
+
+  - action: screenshot
+    name: carousel-slide-2
+    description: Capture second carousel slide
+
+  # Click next slide again
+  - action: click
+    selector: '[aria-label="Next slide"]'
+    description: Click next slide button again
+
+  - action: wait
+    duration: 1000
+    description: Wait for slide transition
+
+  - action: screenshot
+    name: carousel-slide-3
+    description: Capture third carousel slide
+
+  # Click previous slide
+  - action: click
+    selector: '[aria-label="Previous slide"]'
+    description: Click previous slide button
+
+  - action: wait
+    duration: 1000
+    description: Wait for slide transition
+
+  - action: screenshot
+    name: carousel-slide-back
+    description: Capture slide after going back
+
+  # Test slide indicator buttons
+  - action: click
+    selector: '[aria-label="Go to slide 1"]'
+    description: Click on slide 1 indicator
+
+  - action: wait
+    duration: 1000
+    description: Wait for slide transition
+
+  - action: screenshot
+    name: carousel-indicator-1
+    description: Capture after clicking slide 1 indicator
+
+  - action: click
+    selector: '[aria-label="Go to slide 3"]'
+    description: Click on slide 3 indicator
+
+  - action: wait
+    duration: 1000
+    description: Wait for slide transition
+
+  - action: screenshot
+    name: carousel-indicator-3
+    description: Capture after clicking slide 3 indicator

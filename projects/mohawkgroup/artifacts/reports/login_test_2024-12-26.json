@@ -1,0 +1,74 @@
+{
+  "name": "Login Flow Test",
+  "description": "Test user authentication workflow",
+  "timestamp": "2024-12-26T09:15:00.000Z",
+  "duration": 8234,
+  "summary": {
+    "total": 7,
+    "passed": 5,
+    "failed": 2,
+    "duration": 8234,
+    "description": "Login test with 2 failures"
+  },
+  "flows": [
+    {
+      "name": "Login Flow Test",
+      "description": "User login workflow",
+      "status": "failed",
+      "duration": 8234,
+      "steps": [
+        {
+          "action": "goto",
+          "description": "Navigate to login page",
+          "selector": null,
+          "status": "passed",
+          "duration": 1456
+        },
+        {
+          "action": "waitForLoadState",
+          "description": "Wait for page load",
+          "selector": null,
+          "status": "passed",
+          "duration": 789
+        },
+        {
+          "action": "fill",
+          "description": "Enter username",
+          "selector": "#username",
+          "status": "passed",
+          "duration": 234
+        },
+        {
+          "action": "fill",
+          "description": "Enter password",
+          "selector": "#password",
+          "status": "passed",
+          "duration": 198
+        },
+        {
+          "action": "click",
+          "description": "Click login button",
+          "selector": "button[type=submit]",
+          "status": "passed",
+          "duration": 2345
+        },
+        {
+          "action": "expectVisible",
+          "description": "Check dashboard is visible",
+          "selector": ".dashboard-container",
+          "status": "failed",
+          "duration": 3000,
+          "error": "Element not found: .dashboard-container (timeout 30000ms)"
+        },
+        {
+          "action": "expectText",
+          "description": "Verify welcome message",
+          "selector": "h1.welcome",
+          "status": "failed",
+          "duration": 212,
+          "error": "Expected text 'Welcome' but element not found"
+        }
+      ]
+    }
+  ]
+}
