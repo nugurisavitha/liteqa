@@ -1,6 +1,7 @@
 /**
  * LiteQA Web Server
  * Express + Socket.io for web UI with Multi-Project Support
+ * Supports both file-based and MongoDB storage
  */
 
 import express, { Request, Response } from 'express';
@@ -19,6 +20,8 @@ import { JsonReporter, JsonReport } from '../reporters/json-reporter';
 import { Flow, FlowResult } from '../core/types';
 import { BrowserRecorder } from './recorder';
 import { LoadTester, WebVitalsCollector } from '../performance/load-tester';
+import { connectDatabase } from '../db/database';
+import * as DataLayer from '../db/data-layer';
 
 export class LiteQAServer {
   private app: express.Application;
@@ -67,95 +70,48 @@ export class LiteQAServer {
     // ==========================================
 
     // List all projects
-    api.get('/projects', (req: Request, res: Response) => {
-      const projects = this.listProjects();
-      res.json(projects);
+    api.get('/projects', async (req: Request, res: Response) => {
+      try {
+        const projects = await DataLayer.listProjects(this.workspaceDir);
+        res.json(projects);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
     });
 
     // Get single project info
-    api.get('/projects/:project', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      if (!fs.existsSync(projectDir)) {
-        return res.status(404).json({ error: 'Project not found' });
+    api.get('/projects/:project', async (req: Request, res: Response) => {
+      try {
+        const project = await DataLayer.getProject(this.workspaceDir, req.params.project);
+        if (!project) {
+          return res.status(404).json({ error: 'Project not found' });
+        }
+        res.json(project);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
       }
-      const info = this.getProjectInfo(req.params.project);
-      res.json(info);
     });
 
     // Create new project
-    api.post('/projects', (req: Request, res: Response) => {
+    api.post('/projects', async (req: Request, res: Response) => {
       const { name, description, baseUrl } = req.body;
 
       if (!name) {
         return res.status(400).json({ error: 'Project name is required' });
       }
 
-      // Sanitize project name
-      const safeName = name.toLowerCase().replace(/[^a-z0-9_-]/g, '_');
-      const projectDir = this.getProjectDir(safeName);
-
-      if (fs.existsSync(projectDir)) {
-        return res.status(400).json({ error: 'Project already exists' });
-      }
-
       try {
-        // Create project directory structure
-        fs.mkdirSync(projectDir, { recursive: true });
-        fs.mkdirSync(path.join(projectDir, 'flows'), { recursive: true });
-        fs.mkdirSync(path.join(projectDir, 'artifacts', 'reports'), { recursive: true });
-        fs.mkdirSync(path.join(projectDir, 'artifacts', 'screenshots'), { recursive: true });
-        fs.mkdirSync(path.join(projectDir, 'data'), { recursive: true });
-
-        // Create suite.yaml
-        const suiteContent = `# ${name} Test Suite
-# ${'='.repeat(name.length + 12)}
-
-name: ${name}
-description: ${description || 'Test suite for ' + name}
-
-# List of flow files to run
-flows: []
-
-# Environment variables
-env:
-  BASE_URL: ${baseUrl || 'https://example.com'}
-  TIMEOUT: 30000
-`;
-        fs.writeFileSync(path.join(projectDir, 'suite.yaml'), suiteContent);
-
-        // Create repository.yaml
-        const repoContent = `# Object Repository for ${name}
-# Centralized element locators
-
-pages: {}
-`;
-        fs.writeFileSync(path.join(projectDir, 'repository.yaml'), repoContent);
-
-        res.json({
-          success: true,
-          project: {
-            name: safeName,
-            displayName: name,
-            path: projectDir,
-            description,
-            baseUrl
-          }
-        });
+        const project = await DataLayer.createProject(this.workspaceDir, name, name, description, baseUrl);
+        res.json({ success: true, project });
       } catch (err: any) {
-        res.status(500).json({ error: err.message });
+        res.status(400).json({ error: err.message });
       }
     });
 
-    // Delete project
-    api.delete('/projects/:project', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-
-      if (!fs.existsSync(projectDir)) {
-        return res.status(404).json({ error: 'Project not found' });
-      }
-
+    // Delete project (placeholder for compatibility)
+    api.delete('/projects/:project', async (req: Request, res: Response) => {
       try {
-        fs.rmSync(projectDir, { recursive: true, force: true });
+        await DataLayer.deleteProject(this.workspaceDir, req.params.project);
         res.json({ success: true });
       } catch (err: any) {
         res.status(500).json({ error: err.message });
@@ -163,67 +119,49 @@ pages: {}
     });
 
     // ==========================================
-    // Flow APIs (scoped to project)
+    // Flow Management APIs (Using DataLayer)
     // ==========================================
 
-    // List flows for a project
-    api.get('/projects/:project/flows', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      if (!fs.existsSync(projectDir)) {
-        return res.status(404).json({ error: 'Project not found' });
+    // List flows for project
+    api.get('/projects/:project/flows', async (req: Request, res: Response) => {
+      try {
+        const flows = await DataLayer.listFlows(this.workspaceDir, req.params.project);
+        res.json(flows);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
       }
-      const flows = this.listFlows(projectDir);
-      res.json(flows);
     });
 
     // Get single flow
-    api.get('/projects/:project/flows/:name', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const flowPath = this.findFlowPath(projectDir, req.params.name);
-      if (!flowPath) {
-        return res.status(404).json({ error: 'Flow not found' });
+    api.get('/projects/:project/flows/:name', async (req: Request, res: Response) => {
+      try {
+        const flow = await DataLayer.getFlow(this.workspaceDir, req.params.project, req.params.name);
+        if (!flow) {
+          return res.status(404).json({ error: 'Flow not found' });
+        }
+        res.json(flow);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
       }
-      const content = fs.readFileSync(flowPath, 'utf-8');
-      const flow = yaml.load(content);
-      res.json({ path: flowPath, content, parsed: flow });
     });
 
-    // Create new flow
-    api.post('/projects/:project/flows', (req: Request, res: Response) => {
-      const { name, content } = req.body;
-      const projectDir = this.getProjectDir(req.params.project);
-
-      if (!fs.existsSync(projectDir)) {
-        return res.status(404).json({ error: 'Project not found' });
+    // Create/Update flow
+    api.post('/projects/:project/flows', async (req: Request, res: Response) => {
+      try {
+        const { name, content } = req.body;
+        const fileName = name.endsWith('.yaml') ? name : `${name}.yaml`;
+        await DataLayer.saveFlow(this.workspaceDir, req.params.project, fileName, content);
+        res.json({ success: true });
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
       }
-
-      const flowsDir = path.join(projectDir, 'flows');
-      if (!fs.existsSync(flowsDir)) {
-        fs.mkdirSync(flowsDir, { recursive: true });
-      }
-
-      const flowPath = path.join(flowsDir, `${name}.yaml`);
-      if (fs.existsSync(flowPath)) {
-        return res.status(400).json({ error: 'Flow already exists' });
-      }
-
-      fs.writeFileSync(flowPath, content, 'utf-8');
-
-      // Update suite.yaml to include the new flow
-      this.addFlowToSuite(projectDir, `flows/${name}.yaml`);
-
-      res.json({ success: true, path: flowPath });
     });
 
     // Update flow
-    api.put('/projects/:project/flows/:name', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const flowPath = this.findFlowPath(projectDir, req.params.name);
-      if (!flowPath) {
-        return res.status(404).json({ error: 'Flow not found' });
-      }
+    api.put('/projects/:project/flows/:name', async (req: Request, res: Response) => {
       try {
-        fs.writeFileSync(flowPath, req.body.content, 'utf-8');
+        const { content } = req.body;
+        await DataLayer.saveFlow(this.workspaceDir, req.params.project, req.params.name, content);
         res.json({ success: true });
       } catch (err: any) {
         res.status(500).json({ error: err.message });
@@ -231,14 +169,85 @@ pages: {}
     });
 
     // Delete flow
-    api.delete('/projects/:project/flows/:name', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const flowPath = this.findFlowPath(projectDir, req.params.name);
-      if (!flowPath) {
-        return res.status(404).json({ error: 'Flow not found' });
+    api.delete('/projects/:project/flows/:name', async (req: Request, res: Response) => {
+      try {
+        await DataLayer.deleteFlow(this.workspaceDir, req.params.project, req.params.name);
+        res.json({ success: true });
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
       }
-      fs.unlinkSync(flowPath);
-      res.json({ success: true });
+    });
+
+    // ==========================================
+    // Report APIs (Using DataLayer)
+    // ==========================================
+
+    // List reports
+    api.get('/projects/:project/reports', async (req: Request, res: Response) => {
+      try {
+        const reports = await DataLayer.listReports(this.workspaceDir, req.params.project);
+        res.json(reports);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
+    });
+
+    // Get single report
+    api.get('/projects/:project/reports/:name', async (req: Request, res: Response) => {
+      try {
+        const report = await DataLayer.getReport(this.workspaceDir, req.params.project, req.params.name);
+        if (!report) {
+          return res.status(404).json({ error: 'Report not found' });
+        }
+        res.json(report);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
+    });
+
+    // Delete report
+    api.delete('/projects/:project/reports/:name', async (req: Request, res: Response) => {
+      try {
+        await DataLayer.deleteReport(this.workspaceDir, req.params.project, req.params.name);
+        res.json({ success: true });
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
+    });
+
+    // ==========================================
+    // Repository APIs (Using DataLayer)
+    // ==========================================
+
+    api.get('/projects/:project/repository', async (req: Request, res: Response) => {
+      try {
+        const content = await DataLayer.getRepository(this.workspaceDir, req.params.project);
+        res.json({ content });
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
+    });
+
+    api.put('/projects/:project/repository', async (req: Request, res: Response) => {
+      try {
+        await DataLayer.saveRepository(this.workspaceDir, req.params.project, req.body.content);
+        res.json({ success: true });
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
+    });
+
+    // ==========================================
+    // Suite APIs
+    // ==========================================
+
+    api.get('/projects/:project/suites', async (req: Request, res: Response) => {
+      try {
+        const suite = await DataLayer.getSuite(this.workspaceDir, req.params.project);
+        res.json(suite ? [suite] : []);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
     });
 
     // ==========================================
@@ -307,74 +316,6 @@ pages: {}
     });
 
     // ==========================================
-    // Reports APIs (scoped to project)
-    // ==========================================
-
-    // Get reports for a project
-    api.get('/projects/:project/reports', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const reports = this.listReports(projectDir);
-      res.json(reports);
-    });
-
-    // Get single report
-    api.get('/projects/:project/reports/:name', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const reportPath = path.join(projectDir, 'artifacts', 'reports', req.params.name);
-      if (!fs.existsSync(reportPath)) {
-        return res.status(404).json({ error: 'Report not found' });
-      }
-      const content = fs.readFileSync(reportPath, 'utf-8');
-      res.json(JSON.parse(content));
-    });
-
-    // Delete report
-    api.delete('/projects/:project/reports/:name', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const reportPath = path.join(projectDir, 'artifacts', 'reports', req.params.name);
-      if (!fs.existsSync(reportPath)) {
-        return res.status(404).json({ error: 'Report not found' });
-      }
-      fs.unlinkSync(reportPath);
-      res.json({ success: true, message: 'Report deleted' });
-    });
-
-    // ==========================================
-    // Suite APIs (scoped to project)
-    // ==========================================
-
-    // Get suites for a project
-    api.get('/projects/:project/suites', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const suites = this.listSuites(projectDir);
-      res.json(suites);
-    });
-
-    // ==========================================
-    // Object Repository APIs (scoped to project)
-    // ==========================================
-
-    // Get repository
-    api.get('/projects/:project/repository', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const repoPath = path.join(projectDir, 'repository.yaml');
-      if (!fs.existsSync(repoPath)) {
-        return res.json({ pages: {} });
-      }
-      const content = fs.readFileSync(repoPath, 'utf-8');
-      res.json(yaml.load(content));
-    });
-
-    // Save repository
-    api.put('/projects/:project/repository', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const repoPath = path.join(projectDir, 'repository.yaml');
-      const content = yaml.dump(req.body);
-      fs.writeFileSync(repoPath, content, 'utf-8');
-      res.json({ success: true });
-    });
-
-    // ==========================================
     // Performance Testing APIs
     // ==========================================
 
@@ -400,22 +341,17 @@ pages: {}
           assertions,
         });
 
-        // Save performance report
-        const projectDir = this.getProjectDir(req.params.project);
-        const reportsDir = path.join(projectDir, 'artifacts', 'reports');
-        if (!fs.existsSync(reportsDir)) {
-          fs.mkdirSync(reportsDir, { recursive: true });
-        }
-
+        // Save performance report using DataLayer
         const reportName = `perf_load_${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
-        const reportPath = path.join(reportsDir, reportName);
-        fs.writeFileSync(reportPath, JSON.stringify({
+        const reportContent = {
           type: 'load',
           name: `Load Test - ${targetUrl}`,
           description: `Load test with ${virtualUsers} users for ${duration}s`,
           timestamp: new Date().toISOString(),
+          config: { targetUrl, method, virtualUsers, duration, rampUp },
           ...result,
-        }, null, 2));
+        };
+        await DataLayer.saveReport(this.workspaceDir, req.params.project, reportName, reportContent);
 
         res.json(result);
       } catch (err: any) {
@@ -435,22 +371,17 @@ pages: {}
         const collector = new WebVitalsCollector();
         const results = await collector.measureMultiple(urls);
 
-        // Save performance report
-        const projectDir = this.getProjectDir(req.params.project);
-        const reportsDir = path.join(projectDir, 'artifacts', 'reports');
-        if (!fs.existsSync(reportsDir)) {
-          fs.mkdirSync(reportsDir, { recursive: true });
-        }
-
+        // Save performance report using DataLayer
         const reportName = `perf_vitals_${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
-        const reportPath = path.join(reportsDir, reportName);
-        fs.writeFileSync(reportPath, JSON.stringify({
+        const reportContent = {
           type: 'page',
           name: 'Web Vitals Measurement',
           description: `Page performance for ${urls.length} URL(s)`,
           timestamp: new Date().toISOString(),
+          config: { urls },
           results,
-        }, null, 2));
+        };
+        await DataLayer.saveReport(this.workspaceDir, req.params.project, reportName, reportContent);
 
         res.json({ results });
       } catch (err: any) {
@@ -516,22 +447,17 @@ pages: {}
           },
         };
 
-        // Save performance report
-        const projectDir = this.getProjectDir(req.params.project);
-        const reportsDir = path.join(projectDir, 'artifacts', 'reports');
-        if (!fs.existsSync(reportsDir)) {
-          fs.mkdirSync(reportsDir, { recursive: true });
-        }
-
+        // Save performance report using DataLayer
         const reportName = `perf_api_${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
-        const reportPath = path.join(reportsDir, reportName);
-        fs.writeFileSync(reportPath, JSON.stringify({
+        const reportContent = {
           type: 'api',
           name: `API Performance - ${url}`,
           description: `API performance test with ${iterations} iterations`,
           timestamp: new Date().toISOString(),
+          config: { url, method, iterations },
           ...result,
-        }, null, 2));
+        };
+        await DataLayer.saveReport(this.workspaceDir, req.params.project, reportName, reportContent);
 
         res.json(result);
       } catch (err: any) {
@@ -540,35 +466,20 @@ pages: {}
     });
 
     // Get performance reports
-    api.get('/projects/:project/performance/reports', (req: Request, res: Response) => {
-      const projectDir = this.getProjectDir(req.params.project);
-      const reportsDir = path.join(projectDir, 'artifacts', 'reports');
-
-      if (!fs.existsSync(reportsDir)) {
-        return res.json([]);
-      }
-
-      const reports = fs.readdirSync(reportsDir)
-        .filter(f => f.startsWith('perf_') && f.endsWith('.json'))
-        .map(file => {
-          const filePath = path.join(reportsDir, file);
-          try {
-            const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-            return {
-              name: file,
-              path: filePath,
-              type: content.type,
-              displayName: content.name,
-              description: content.description,
-              timestamp: content.timestamp,
-            };
-          } catch {
-            return { name: file, path: filePath, error: 'Parse error' };
-          }
-        })
+    api.get('/projects/:project/performance/reports', async (req: Request, res: Response) => {
+      try {
+        const reports = await DataLayer.listReports(this.workspaceDir, req.params.project);
+        // Filter for performance reports only
+        const perfReports = reports.filter(r =>
+          r.type === 'load' || r.type === 'page' || r.type === 'api' ||
+          r.name?.startsWith('perf_')
+        )
         .sort((a, b) => new Date(b.timestamp || 0).getTime() - new Date(a.timestamp || 0).getTime());
 
-      res.json(reports);
+        res.json(perfReports);
+      } catch (err: any) {
+        res.status(500).json({ error: err.message });
+      }
     });
 
     // ==========================================
@@ -1452,7 +1363,14 @@ pages: {}
     return yaml;
   }
 
-  public start(): void {
+  public async start(): Promise<void> {
+    // Connect to database if MongoDB URI is configured
+    try {
+      await connectDatabase();
+    } catch (error) {
+      console.warn('[Server] Database connection failed, using file-based storage');
+    }
+
     this.server.listen(this.port, () => {
       console.log(`
 ╔══════════════════════════════════════════════════════════════╗
@@ -1475,8 +1393,8 @@ pages: {}
   }
 }
 
-export function startServer(port: number = 3000, workspaceDir: string = process.cwd()): LiteQAServer {
+export async function startServer(port: number = 3000, workspaceDir: string = process.cwd()): Promise<LiteQAServer> {
   const server = new LiteQAServer(port, workspaceDir);
-  server.start();
+  await server.start();
   return server;
 }

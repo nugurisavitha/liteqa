@@ -411,7 +411,7 @@ program
       const { startServer } = require('../web/server');
       const projectDir = path.resolve(opts.dir);
       const port = parseInt(process.env.PORT || opts.port, 10);
-      startServer(port, projectDir);
+      await startServer(port, projectDir);
     } catch (error) {
       console.error('Web UI failed:', (error as Error).message);
       process.exit(1);

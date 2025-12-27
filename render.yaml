@@ -7,4 +7,12 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: MONGODB_URI
+        sync: false  # Set this in Render dashboard with your MongoDB Atlas connection string
     plan: free
+
+# MongoDB Setup Instructions:
+# 1. Create free MongoDB Atlas cluster at https://mongodb.com/atlas
+# 2. Get connection string (mongodb+srv://user:pass@cluster.mongodb.net/liteqa)
+# 3. In Render dashboard, add MONGODB_URI environment variable with your connection string
+# 4. Redeploy the service
