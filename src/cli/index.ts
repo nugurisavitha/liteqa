@@ -404,13 +404,14 @@ program
   .command('web')
   .alias('ui')
   .description('Start the LiteQA Web UI')
-  .option('-p, --port <port>', 'Port number', '3000')
+  .option('-p, --port <port>', 'Port number', process.env.PORT || '3000')
   .option('-d, --dir <directory>', 'Project directory', '.')
   .action(async (opts) => {
     try {
       const { startServer } = require('../web/server');
       const projectDir = path.resolve(opts.dir);
-      startServer(parseInt(opts.port, 10), projectDir);
+      const port = parseInt(process.env.PORT || opts.port, 10);
+      startServer(port, projectDir);
     } catch (error) {
       console.error('Web UI failed:', (error as Error).message);
       process.exit(1);
