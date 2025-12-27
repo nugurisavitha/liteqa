@@ -621,7 +621,20 @@
         </h2>
         <p class="subtitle">Enter a URL, click Start, perform your actions in the browser, then click Stop to generate your test.</p>
 
-        <div class="record-controls">
+        <!-- Cloud deployment notice -->
+        <div id="cloud-recording-notice" style="display: none; background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+          <strong style="color: #856404;">Recording requires local installation</strong>
+          <p style="color: #856404; margin: 8px 0 0 0; font-size: 14px;">
+            Browser recording opens a visible browser window that requires local access.
+            To use recording, run LiteQA locally:<br>
+            <code style="background: #fff; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 8px;">
+              git clone https://github.com/nugurisavitha/liteqa.git && cd liteqa && npm install && npm start
+            </code><br>
+            <span style="margin-top: 8px; display: block;">Or use <strong>Manual Mode</strong> below to add steps manually.</span>
+          </p>
+        </div>
+
+        <div class="record-controls" id="record-controls-container">
           <input type="text"
                  id="record-url"
                  class="record-url-input"
@@ -1631,6 +1644,15 @@
     const builder = new TestBuilder();
     builder.initSocket();
     builder.initProject();
+
+    // Detect if running on cloud (not localhost)
+    const isCloud = !['localhost', '127.0.0.1'].includes(window.location.hostname);
+    if (isCloud) {
+      document.getElementById('cloud-recording-notice').style.display = 'block';
+      document.getElementById('record-controls-container').style.display = 'none';
+      // Auto-switch to manual mode
+      builder.switchMethod('manual');
+    }
 
     // Update preview when test info changes
     document.getElementById('test-name').addEventListener('input', () => builder.updatePreview());
